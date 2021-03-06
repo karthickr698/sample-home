@@ -1,0 +1,132 @@
+.menubar {
+  margin-right: 50px !important;
+}
+.hamBurgerMenu {
+  margin-top: 0.5rem;
+  height: 50px !important;
+  width: 50px !important;
+}
+.menuItems {
+  margin-top: 0.6rem !important;
+  width: 100vw !important;
+  height: 70vh !important;
+  font-size: 1.2rem !important;
+  margin-right: 0 !important;
+  right: 0 !important;
+  margin-left: 0 !important;
+  padding-left: 1rem;
+}
+
+.mob-nav {
+  display: grid;
+  grid-template-columns: 18% 67% auto;
+  width: 100%;
+  height: 4.5rem;
+  background-color: brown;
+  padding: 0.3rem 0.8rem 0 0.8rem;
+}
+.mob-nav img {
+  padding-top: 0.3rem;
+  width: 3rem;
+  height: 3.5rem;
+}
+.search-cont {
+  width: 95%;
+}
+.search {
+  margin-top: 0.5rem;
+  display: flex;
+  background-color: white;
+  border-radius: 10px;
+}
+
+.desktop {
+  margin-top: 0;
+  border: 1px solid grey;
+}
+
+.mega-menu {
+  text-align: center !important;
+  margin: auto !important;
+  margin-left: 5% !important;
+  width: 90%;
+  height: 3rem;
+  background-color: blueviolet !important;
+  color: white !important;
+  font-size: 1.2rem !important;
+  font-weight: bold !important;
+}
+.popover {
+  top: 70px !important;
+  margin-top: 2rem !important;
+  width: 96vw;
+  height: 85vh;
+  left: 0 !important;
+  margin: 0 2rem !important;
+}
+.rs-popover.placement-bottom > .rs-popover-arrow,
+.rs-popover.placement-top > .rs-popover-arrow {
+  left: 40% !important;
+}
+.pop-cont {
+  font-size: 1rem !important;
+  font-weight: bold !important;
+  height: 4rem;
+  cursor: pointer !important;
+  color: grey !important;
+}
+.pop-cont:hover {
+  background-color: rgb(207, 204, 204);
+}
+.pop-main {
+  height: 83vh !important;
+  overflow: auto !important;
+}
+
+/* home */
+
+.background {
+  width: 100vw;
+  height: 78vh;
+}
+
+.img {
+  background-image: url('https://readmycourse.com/Images/home-page-bg-graphics.svg');
+  width: 100%;
+  opacity: 0.6;
+  position: absolute;
+}
+.overall {
+  position: relative;
+  text-align: left;
+  margin-left: 2rem;
+  opacity: 1 !important;
+}
+.textcontect {
+  margin-top: 6rem;
+  font-size: 50px;
+  font-weight: bold;
+  width: 50rem;
+  color: black;
+}
+/* #B83B5E */
+.textcontect span {
+  color: #9900aa;
+}
+.bookBtn {
+  background-color: brown !important;
+  color: white !important;
+  margin-top: 2rem;
+  border-radius: 20px;
+  width: 13rem;
+  height: 3rem;
+  font-weight: bold !important;
+  font-size: 18px !important;
+}
+.ratecontect {
+  margin-top: 2rem;
+}
+.ratecontect span {
+  color: #9900aa;
+  font-weight: 100;
+}
