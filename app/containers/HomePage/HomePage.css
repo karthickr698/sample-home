@@ -125,82 +125,114 @@
   width: 100vw;
   opacity: 0.4;
   height: 50px;
-  background: linear-gradient(#e9e0eb,#c9a4cc);
+  background: linear-gradient(#e9e0eb, #c9a4cc);
   background-color: #9900aa;
   border-bottom-left-radius: 50%;
   border-bottom-right-radius: 50%;
 }
-.subtittle{ 
+.subtittle {
   padding-top: 4rem;
   text-align: center;
   font-size: 40px;
   font-weight: bold;
   color: black;
 }
-.subtittle span{
+.subtittle span {
   color: #9900aa;
 }
-.textopacity{
+.textopacity {
   font-size: 18px;
   color: gray;
 }
 .PrivateTabIndicator-colorPrimary-6 {
-    background: none !important;
+  background: none !important;
 }
-.logos img{
+.logos img {
   zoom: 0.3;
-  width: 25rem;
-  margin-left: 2rem;
-  margin-right: 5rem;
+  width: 20rem;
+  margin-left: 7rem;
+  margin-right: 7rem;
   border: none !important;
 }
-.logoscroll{
+.logoscroll {
   margin: auto;
-  width: 55vw;
+  width: 58vw;
 }
 .curvetop {
   margin-top: 0rem;
   position: absolute;
   width: 100vw;
   height: auto;
-  background: linear-gradient(#f1d7f3,#f2e9f3,#ffffff,#ffffff,#f2e9f3,#f1d7f3);
+  background: linear-gradient(
+    #f1d7f3,
+    #f2e9f3,
+    #ffffff,
+    #ffffff,
+    #f2e9f3,
+    #f1d7f3
+  );
   background-color: #9900aa;
   margin-bottom: 2rem;
-  border-bottom-left-radius: 50%;
-  border-bottom-right-radius: 50%;
-  border-top-left-radius: 50%;
-  border-top-right-radius: 50%;
+  border-radius: 50%;
 }
-.texttittle{
+.texttittle {
   font-size: 30px;
   font-weight: 900;
   color: #9900aa;
   text-align: center;
   margin-top: 2rem;
 }
-.textopacityalign{
+.textopacityalign {
   color: gray;
   text-align: center;
 }
-.icons{
+.icons {
   text-align: center;
 }
-.textalign{
+.icons img {
+  zoom: 0.2;
+  margin-top: 2rem;
+}
+.textalign {
   color: gray !important;
   width: 10rem;
   margin: auto;
 }
-.textalign div{
+.textalign div {
   color: rgb(58, 57, 57) !important;
 }
-.livetittle{
+.livetittle {
   color: #aa004f;
   text-align: center;
   font-size: 20px;
 }
-.circle{
-  color: #000000;
-  width: 8rem;
-  height: 8rem;
+.circleflex {
+  display: flex;
+  margin-top: 2rem;
+  justify-content: center;
+}
+.circle {
+  margin-left: 1rem;
+  background-color: #9900aa;
+  opacity: 0.3;
+  width: 6rem;
+  height: 6rem;
   border-radius: 50%;
+}
+.text-help {
+  font-size: 30px;
+  font-weight: 900;
+  text-align: center;
+  color: black;
+  margin-top: 3rem;
+}
+.text-help span {
+  color: #aa004f;
+}
+.logoscroll2 {
+  background: none;
+  margin: auto;
+  width: 58vw;
+  margin-top: 1rem;
+  margin-bottom: 5rem;
 }
