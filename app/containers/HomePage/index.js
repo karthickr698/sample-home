@@ -29,10 +29,10 @@ import Tab from '@material-ui/core/Tab';
 import Typography from '@material-ui/core/Typography';
 
 import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
+import EmojiObjectsIcon from '@material-ui/icons/EmojiObjects';
 import saga from './saga';
 import reducer from './reducer';
 import makeSelectHomePage from './selectors';
-import EmojiObjectsIcon from '@material-ui/icons/EmojiObjects';
 
 // function TabPanel(props) {
 //   const { children, value, index, ...other } = props;
@@ -67,7 +67,7 @@ function a11yProps(index) {
   };
 }
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(theme => ({
   root: {
     flexGrow: 1,
     width: '100%',
@@ -257,7 +257,7 @@ const Elements = () => {
       </Grid>
       <Grid item xs={6} className="pop-main">
         {data &&
-          data.map((ele) => (
+          data.map(ele => (
             <Grid container spacing={1} className="pop-cont">
               <Grid item xs={12}>
                 {ele.value}
@@ -284,7 +284,7 @@ const AntTabs = withStyles({
   },
 })(Tabs);
 
-const AntTab = withStyles((theme) => ({
+const AntTab = withStyles(theme => ({
   root: {
     textTransform: 'none',
     minWidth: 20,
@@ -303,7 +303,7 @@ const AntTab = withStyles((theme) => ({
     },
   },
   selected: {},
-}))((props) => <Tab disableRipple {...props} />);
+}))(props => <Tab disableRipple {...props} />);
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -487,17 +487,18 @@ export function HomePage() {
           </Button>
         </div>
       </div>
-      <div className="curve"></div>
+      <div className="curve" />
       <div>
         <div className="subtittle">
-            <div>
-              Achieve your targets with <span>ReadMycourse</span>
+          <div>
+            Achieve your targets with <span>ReadMycourse</span>
           </div>
-            <div class="textopacity">
-              try a free live course today from instructors 10+ world-class universities
-            </div>
+          <div className="textopacity">
+            try a free live course today from instructors 10+ world-class
+            universities
+          </div>
         </div>
-        <div class="logoscroll">
+        <div className="logoscroll">
           <div className={classes.root}>
             <Tabs
               value={value}
@@ -507,73 +508,63 @@ export function HomePage() {
               variant="scrollable"
               scrollButtons="auto"
               aria-label="scrollable auto tabs example"
-              >
-              <div class="logos">
-                <img src="https://readmycourse.com/Images/iit-indore-logo.png"/>
-                <img src="https://readmycourse.com/Images/iit_mandi_logo.png"/>
-                <img src="https://readmycourse.com/Images/mnnit-allahabad-logo.png"/>
-                <img src="https://readmycourse.com//Images/institutions_logo/IIT_Kharagpur_Logo.svg"/>
-                <img src="https://readmycourse.com/Images/institutions_logo/mit-logo.png"/>
-                <img src="https://readmycourse.com/Images/institutions_logo/stanford.png"/>
-                <img src="https://readmycourse.com/Images/institutions_logo/iiser-pune-logo.png"/>
+            >
+              <div className="logos">
+                <img src="https://readmycourse.com/Images/iit-indore-logo.png" />
+                <img src="https://readmycourse.com/Images/iit_mandi_logo.png" />
+                <img src="https://readmycourse.com/Images/mnnit-allahabad-logo.png" />
+                <img src="https://readmycourse.com//Images/institutions_logo/IIT_Kharagpur_Logo.svg" />
+                <img src="https://readmycourse.com/Images/institutions_logo/mit-logo.png" />
+                <img src="https://readmycourse.com/Images/institutions_logo/stanford.png" />
+                <img src="https://readmycourse.com/Images/institutions_logo/iiser-pune-logo.png" />
               </div>
             </Tabs>
           </div>
         </div>
-          <div>
+        <div>
           <div className="curvetop">
-            <div class="texttittle">
-              benefites of  learning live
-              </div>
-              <div class="textopacityalign">
+            <div className="texttittle">benefites of learning live</div>
+            <div className="textopacityalign">
               Do you want to knowwhy millions of students want learn live?
-              </div>
-            <div class="icons">
-            <Grid container spacing={1}>
-              <Grid item xs={5}>      
-                <div>
-                    <EmojiObjectsIcon style={{ color:'#aa004f',zoom:'4'}} />
-                    <div class="textalign">
-                      <div>
-                        customized learning
-                      </div>
-                      Learn what you exactly need, to boost your interest.
-                    </div>
-                </div>
-                  </Grid>
-                  <Grid item xs={2}>      
-                <div>
-                    <EmojiObjectsIcon style={{ color: '#aa004f', zoom: '4' }} />
-                     <div class="textalign">
-                      <div>
-                        customized learning
-                      </div>
-                      Learn what you exactly need, to boost your interest.
-                    </div>
-                </div>
-                  </Grid>
-                  <Grid item xs={5}>      
-                <div>
-                  <EmojiObjectsIcon style={{ color:'#aa004f',zoom:'4'}} />
-                   <div class="textalign">
-                      <div>
-                        customized learning
-                      </div>
-                      Learn what you exactly need, to boost your interest.
-                    </div>                
-                  </div>
-                  </Grid>
-                </Grid>
             </div>
-            <div class="texttittle">
+            <div className="icons">
+              <Grid container spacing={1}>
+                <Grid item xs={5}>
+                  <div>
+                    <EmojiObjectsIcon style={{ color: '#aa004f', zoom: '4' }} />
+                    <div className="textalign">
+                      <div>customized learning</div>
+                      Learn what you exactly need, to boost your interest.
+                    </div>
+                  </div>
+                </Grid>
+                <Grid item xs={2}>
+                  <div>
+                    <EmojiObjectsIcon style={{ color: '#aa004f', zoom: '4' }} />
+                    <div className="textalign">
+                      <div>customized learning</div>
+                      Learn what you exactly need, to boost your interest.
+                    </div>
+                  </div>
+                </Grid>
+                <Grid item xs={5}>
+                  <div>
+                    <EmojiObjectsIcon style={{ color: '#aa004f', zoom: '4' }} />
+                    <div className="textalign">
+                      <div>customized learning</div>
+                      Learn what you exactly need, to boost your interest.
+                    </div>
+                  </div>
+                </Grid>
+              </Grid>
+            </div>
+            <div className="texttittle">
               Features available in our live classes
             </div>
-            <div class="livetittle">
-              "who knows, dose it live"
-            </div>
-            <div class="circle"></div>
-            </div>
+            <div className="livetittle">"who knows, dose it live"</div>
+            <div className="circle" />
           </div>
+        </div>
       </div>
     </div>
   );
@@ -593,6 +584,12 @@ function mapDispatchToProps(dispatch) {
   };
 }
 
-const withConnect = connect(mapStateToProps, mapDispatchToProps);
+const withConnect = connect(
+  mapStateToProps,
+  mapDispatchToProps,
+);
 
-export default compose(withConnect, memo)(HomePage);
+export default compose(
+  withConnect,
+  memo,
+)(HomePage);
