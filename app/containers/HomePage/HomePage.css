@@ -1,6 +1,10 @@
 .menubar {
   margin-right: 50px !important;
 }
+.MuiGrid-spacing-xs-1 {
+  margin: 0;
+  max-width: 99.1vw;
+}
 .hamBurgerMenu {
   margin-top: 0.5rem;
   height: 50px !important;
@@ -8,7 +12,7 @@
 }
 .menuItems {
   margin-top: 0.6rem !important;
-  width: 100vw !important;
+  width: 97vw !important;
   height: 70vh !important;
   font-size: 1.2rem !important;
   margin-right: 0 !important;
@@ -85,22 +89,20 @@
 
 /* home */
 
-.background {
-  max-width: 100vw;
-}
 .background img {
-  width: 100vw;
-  height: 50rem;
+  width: 98.8vw;
   opacity: 0.4;
+  position: absolute;
 }
 .overall {
   position: relative;
   text-align: left;
-  margin-left: 5rem;
+  margin-left: 4rem;
+  height: 30rem;
   opacity: 1 !important;
 }
 .textcontect {
-  height: 20rem;
+  height: 18rem;
   padding-top: 4rem;
   font-size: 60px;
   font-weight: bold;
@@ -122,10 +124,10 @@
 .curve {
   margin-top: 0rem;
   position: absolute;
-  width: 100vw;
+  width: 98.8vw;
   opacity: 0.4;
   height: 50px;
-  background: linear-gradient(#e9e0eb, #c9a4cc);
+  background: linear-gradient(#fef6f7, #c9a4cc);
   background-color: #9900aa;
   border-bottom-left-radius: 50%;
   border-bottom-right-radius: 50%;
@@ -144,7 +146,7 @@
   font-size: 18px;
   color: gray;
 }
-.PrivateTabIndicator-colorPrimary-6 {
+.MuiTabs-indicator {
   background: none !important;
 }
 .logos img {
@@ -156,12 +158,14 @@
 }
 .logoscroll {
   margin: auto;
+  margin-top: 1rem;
+  margin-bottom: 3rem;
   width: 58vw;
 }
 .curvetop {
   margin-top: 0rem;
   position: absolute;
-  width: 100vw;
+  width: 97vw;
   height: auto;
   background: linear-gradient(
     #f1d7f3,
@@ -235,4 +239,26 @@
   width: 58vw;
   margin-top: 1rem;
   margin-bottom: 5rem;
+}
+.chatcard{
+  display: flex !important;
+}
+.chatcard img{
+  width: 10rem;
+  height: 10rem;
+  border-radius: 50%;
+}
+.massegebox{
+  background-color: white;
+  box-shadow: 0px 10px 20px rgb(202, 202, 202);
+  width: 30rem;
+  border-radius: 8px;
+  padding: 1rem;
+  height: 9rem !important;
+  margin-left: 2rem;
+}
+.colorname{
+  color: #9900aa;
+  text-align: right;
+  margin-top: 1rem;
 }

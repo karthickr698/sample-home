@@ -34,26 +34,6 @@ import saga from './saga';
 import reducer from './reducer';
 import makeSelectHomePage from './selectors';
 
-// function TabPanel(props) {
-//   const { children, value, index, ...other } = props;
-
-//   return (
-//     <div
-//       role="tabpanel"
-//       hidden={value !== index}
-//       id={`scrollable-auto-tabpanel-${index}`}
-//       aria-labelledby={`scrollable-auto-tab-${index}`}
-//       {...other}
-//     >
-//       {value === index && (
-//         <Box p={3}>
-//           <Typography>{children}</Typography>
-//         </Box>
-//       )}
-//     </div>
-//   );
-// }
-
 TabPanel.propTypes = {
   children: PropTypes.node,
   index: PropTypes.any.isRequired,
@@ -75,6 +55,13 @@ const useStyles = makeStyles((theme) => ({
     '& > *': {
       margin: theme.spacing(1),
     },
+  },
+  grid:{
+    paddingTop:'1rem',
+    paddingBottom:'1rem',
+    backgroundColor:'#ffffff',
+    boxShadow:'2px 2px 7px #b8b8bd'
+    
   },
   paper: {
     padding: theme.spacing(2),
@@ -276,6 +263,8 @@ const speaker = (
 
 const AntTabs = withStyles({
   root: {
+    margin:'0',
+    padding:'0',
     borderBottom: '1px solid #e8e8e8',
   },
   indicator: {
@@ -423,9 +412,8 @@ export function HomePage() {
             </div>
           </>
         ) : (
-          <div className={classes.root}>
-            <Grid container spacing={1}>
-              <Grid item xs={3}>
+            <Grid container spacing={1} className={classes.grid}>
+              <Grid item xs={2}>
                 <img
                   src="https://readmycourse.com/Images/site-logo-v2-full.png"
                   alt="logo"
@@ -433,6 +421,13 @@ export function HomePage() {
                 />
               </Grid>
               <Grid item xs={2}>
+                <ButtonToolbar>
+                  <Whisper placement="bottom" trigger="click" speaker={speaker}>
+                    <Button className="mega-menu">All Course</Button>
+                  </Whisper>
+                </ButtonToolbar>
+              </Grid>
+              <Grid item xs={3}>
                 <div className="search desktop">
                   <IconButton type="submit" aria-label="search">
                     <SearchIcon />
@@ -445,16 +440,9 @@ export function HomePage() {
                 </div>
               </Grid>
               <Grid item xs={2}>
-                <ButtonToolbar>
-                  <Whisper placement="bottom" trigger="click" speaker={speaker}>
-                    <Button className="mega-menu">All Course</Button>
-                  </Whisper>
-                </ButtonToolbar>
-              </Grid>
-              <Grid item xs={2}>
                 <div>MAEG Award</div>
               </Grid>
-              <Grid item xs={4}>
+              <Grid item xs={2}>
                 <Button variant="contained" color="primary">
                   Primary
                 </Button>
@@ -463,11 +451,6 @@ export function HomePage() {
                 </Button>
               </Grid>
             </Grid>
-            <TabPanel value={value} index={0} />
-            <TabPanel value={value} index={1}>
-              join
-            </TabPanel>
-          </div>
         )}
       </>
       <div className="background">
@@ -604,6 +587,55 @@ export function HomePage() {
           <div className="texttittle">
             Join our specially designed live courses
           </div>
+          <div>
+
+          </div>
+        </div>
+        <div>
+          <div className="chats">
+              <Grid container spacing={1}>
+                <Grid item xs={6}>
+                  <div style={{display:'flex',marginTop:'2rem'}}>
+                    <div class="chatcard">
+                      <img src="https://images.pexels.com/photos/255379/pexels-photo-255379.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" />
+                    </div>
+                    <div className="massegebox">
+                      <span>Technical courses of ReadMyCourse can really satisfy to our student’s hunger for learning and development. It can also help to students for correctly automating, storing, handling, measuring, analysing data and information processing. </span>
+                       <div class="colorname">Anna Bashir Nakhoon</div>
+                  </div>
+                </div>
+                <div style={{display:'flex',marginTop:'2rem'}}>
+                    <div className="massegebox">
+                      <span>Technical courses of ReadMyCourse can really satisfy to our student’s hunger for learning and development. It can also help to students for correctly automating, storing, handling, measuring, analysing data and information processing. </span>
+                       <div class="colorname">Anna Bashir Nakhoon</div>
+                  </div>
+                    <div class="chatcard">
+                      <img src="https://images.pexels.com/photos/255379/pexels-photo-255379.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" />
+                    </div>
+                  </div>
+                </Grid>
+                <Grid item xs={6}>
+                  <div style={{display:'flex',marginTop:'2rem'}}>
+                    <div class="chatcard">
+                      <img src="https://images.pexels.com/photos/255379/pexels-photo-255379.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" />
+                    </div>
+                    <div className="massegebox">
+                      <span>Technical courses of ReadMyCourse can really satisfy to our student’s hunger for learning and development. It can also help to students for correctly automating, storing, handling, measuring, analysing data and information processing. </span>
+                       <div class="colorname">Anna Bashir Nakhoon</div>
+                  </div>
+                </div>
+                <div style={{display:'flex',marginTop:'2rem'}}>
+                    <div className="massegebox">
+                      <span>Technical courses of ReadMyCourse can really satisfy to our student’s hunger for learning and development. It can also help to students for correctly automating, storing, handling, measuring, analysing data and information processing. </span>
+                       <div class="colorname">Anna Bashir Nakhoon</div>
+                  </div>
+                    <div class="chatcard">
+                      <img src="https://images.pexels.com/photos/255379/pexels-photo-255379.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" />
+                    </div>
+                  </div>
+                </Grid>
+              </Grid>
+            </div>
         </div>
       </div>
     </div>
