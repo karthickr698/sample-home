@@ -32,10 +32,46 @@ import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
 import saga from './saga';
 import reducer from './reducer';
 import makeSelectHomePage from './selectors';
+import EmojiObjectsIcon from '@material-ui/icons/EmojiObjects';
 
-const useStyles = makeStyles(theme => ({
+// function TabPanel(props) {
+//   const { children, value, index, ...other } = props;
+
+//   return (
+//     <div
+//       role="tabpanel"
+//       hidden={value !== index}
+//       id={`scrollable-auto-tabpanel-${index}`}
+//       aria-labelledby={`scrollable-auto-tab-${index}`}
+//       {...other}
+//     >
+//       {value === index && (
+//         <Box p={3}>
+//           <Typography>{children}</Typography>
+//         </Box>
+//       )}
+//     </div>
+//   );
+// }
+
+TabPanel.propTypes = {
+  children: PropTypes.node,
+  index: PropTypes.any.isRequired,
+  value: PropTypes.any.isRequired,
+};
+
+function a11yProps(index) {
+  return {
+    id: `scrollable-auto-tab-${index}`,
+    'aria-controls': `scrollable-auto-tabpanel-${index}`,
+  };
+}
+
+const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
+    width: '100%',
+    backgroundColor: theme.palette.background.paper,
     paddingTop: '0.3rem',
     '& > *': {
       margin: theme.spacing(1),
@@ -221,7 +257,7 @@ const Elements = () => {
       </Grid>
       <Grid item xs={6} className="pop-main">
         {data &&
-          data.map(ele => (
+          data.map((ele) => (
             <Grid container spacing={1} className="pop-cont">
               <Grid item xs={12}>
                 {ele.value}
@@ -248,7 +284,7 @@ const AntTabs = withStyles({
   },
 })(Tabs);
 
-const AntTab = withStyles(theme => ({
+const AntTab = withStyles((theme) => ({
   root: {
     textTransform: 'none',
     minWidth: 20,
@@ -267,7 +303,7 @@ const AntTab = withStyles(theme => ({
     },
   },
   selected: {},
-}))(props => <Tab disableRipple {...props} />);
+}))((props) => <Tab disableRipple {...props} />);
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -390,7 +426,7 @@ export function HomePage() {
         ) : (
           <div className={classes.root}>
             <Grid container spacing={1}>
-              <Grid item xs={2}>
+              <Grid item xs={3}>
                 <img
                   src="https://readmycourse.com/Images/site-logo-v2-full.png"
                   alt="logo"
@@ -416,31 +452,16 @@ export function HomePage() {
                   </Whisper>
                 </ButtonToolbar>
               </Grid>
-              <Grid item xs={4}>
-                <AntTabs
-                  value={value}
-                  onChange={handleChange}
-                  aria-label="ant example"
-                >
-                  <AntTab label="Join live class" />
-                  <AntTab label="Practice test" />
-                  <AntTab label="Become Instructor" />
-                  <AntTab label="MAEG Award" />
-                </AntTabs>
-              </Grid>
               <Grid item xs={2}>
-                <Grid container>
-                  <Grid item xs={6}>
-                    <Button variant="contained" color="primary">
-                      Primary
-                    </Button>
-                  </Grid>
-                  <Grid item xs={6}>
-                    <Button variant="contained" color="primary">
-                      Login
-                    </Button>
-                  </Grid>
-                </Grid>
+                <div>MAEG Award</div>
+              </Grid>
+              <Grid item xs={4}>
+                <Button variant="contained" color="primary">
+                  Primary
+                </Button>
+                <Button variant="contained" color="primary">
+                  Login
+                </Button>
               </Grid>
             </Grid>
             <TabPanel value={value} index={0} />
@@ -451,19 +472,108 @@ export function HomePage() {
         )}
       </>
       <div className="background">
-        <div className="background img" />
+        <img
+          src="https://readmycourse.com/Images/home-page-bg-graphics.svg"
+          alt="image"
+        />
         <div className="overall">
           <div className="textcontect">
-            Most Unique courses around the Globe <span>curated for you</span>
+            <div>
+              Most Unique courses around the Globe <span>curated for you</span>
+            </div>
           </div>
           <Button variant="contained" color="secondary" className="bookBtn">
-            Book the free class
+            Book a free class
           </Button>
-          <div className="ratecontect">
-            <span>112+</span>
-            <div>Instructors joined</div>
+        </div>
+      </div>
+      <div className="curve"></div>
+      <div>
+        <div className="subtittle">
+            <div>
+              Achieve your targets with <span>ReadMycourse</span>
+          </div>
+            <div class="textopacity">
+              try a free live course today from instructors 10+ world-class universities
+            </div>
+        </div>
+        <div class="logoscroll">
+          <div className={classes.root}>
+            <Tabs
+              value={value}
+              onChange={handleChange}
+              indicatorColor="primary"
+              textColor="primary"
+              variant="scrollable"
+              scrollButtons="auto"
+              aria-label="scrollable auto tabs example"
+              >
+              <div class="logos">
+                <img src="https://readmycourse.com/Images/iit-indore-logo.png"/>
+                <img src="https://readmycourse.com/Images/iit_mandi_logo.png"/>
+                <img src="https://readmycourse.com/Images/mnnit-allahabad-logo.png"/>
+                <img src="https://readmycourse.com//Images/institutions_logo/IIT_Kharagpur_Logo.svg"/>
+                <img src="https://readmycourse.com/Images/institutions_logo/mit-logo.png"/>
+                <img src="https://readmycourse.com/Images/institutions_logo/stanford.png"/>
+                <img src="https://readmycourse.com/Images/institutions_logo/iiser-pune-logo.png"/>
+              </div>
+            </Tabs>
           </div>
         </div>
+          <div>
+          <div className="curvetop">
+            <div class="texttittle">
+              benefites of  learning live
+              </div>
+              <div class="textopacityalign">
+              Do you want to knowwhy millions of students want learn live?
+              </div>
+            <div class="icons">
+            <Grid container spacing={1}>
+              <Grid item xs={5}>      
+                <div>
+                    <EmojiObjectsIcon style={{ color:'#aa004f',zoom:'4'}} />
+                    <div class="textalign">
+                      <div>
+                        customized learning
+                      </div>
+                      Learn what you exactly need, to boost your interest.
+                    </div>
+                </div>
+                  </Grid>
+                  <Grid item xs={2}>      
+                <div>
+                    <EmojiObjectsIcon style={{ color: '#aa004f', zoom: '4' }} />
+                     <div class="textalign">
+                      <div>
+                        customized learning
+                      </div>
+                      Learn what you exactly need, to boost your interest.
+                    </div>
+                </div>
+                  </Grid>
+                  <Grid item xs={5}>      
+                <div>
+                  <EmojiObjectsIcon style={{ color:'#aa004f',zoom:'4'}} />
+                   <div class="textalign">
+                      <div>
+                        customized learning
+                      </div>
+                      Learn what you exactly need, to boost your interest.
+                    </div>                
+                  </div>
+                  </Grid>
+                </Grid>
+            </div>
+            <div class="texttittle">
+              Features available in our live classes
+            </div>
+            <div class="livetittle">
+              "who knows, dose it live"
+            </div>
+            <div class="circle"></div>
+            </div>
+          </div>
       </div>
     </div>
   );
@@ -483,12 +593,6 @@ function mapDispatchToProps(dispatch) {
   };
 }
 
-const withConnect = connect(
-  mapStateToProps,
-  mapDispatchToProps,
-);
+const withConnect = connect(mapStateToProps, mapDispatchToProps);
 
-export default compose(
-  withConnect,
-  memo,
-)(HomePage);
+export default compose(withConnect, memo)(HomePage);
