@@ -262,3 +262,65 @@
   text-align: right;
   margin-top: 1rem;
 }
+.thankstittle{
+  font-size: 45px;
+  font-weight: 900;
+  color: #9900aa;
+  text-align: center;
+  margin-top: 2rem; 
+}
+.topcouver{
+  margin-top: 0rem;
+  position: absolute;
+  width: 98.8vw;
+  height: 50px;
+  background: linear-gradient(
+    #f1d7f3,
+    #f2e9f3,
+    #f2e9f3,
+    #fbf6fc
+  );
+  margin-bottom: 2rem;
+  border-top-right-radius: 50%;
+  border-top-left-radius: 50%;
+}
+.bottomtab{
+  background-color: #fbf6fc;
+  margin: 0;
+}
+.gridalign{
+  margin: 5rem ;
+}
+.bottomtabtittles{
+  font-size: 18px;
+  font-weight: 900;
+margin-bottom: 2rem;
+}
+.mailinput input{
+  background-color: rgb(241, 241, 241);
+  outline: none !important;
+  border: none !important;
+  height: 3rem;
+  text-align: center;
+}
+.mailinput Button{
+  background-color: #aa004f;
+  width: 16vw;
+  margin-top: 2rem;
+  color: white;
+}
+.mailinput Button:hover{
+  background-color: #aa004f;
+  color: white;
+}
+.connectlogo{
+  zoom: 1.2;
+}
+.imagecertificate{
+  text-align: center;
+}
+.imagecertificate img{
+  width: 50vw;
+  border: 1px solid black;
+  box-shadow: 10px 10px 10px rgb(179, 179, 179);
+}

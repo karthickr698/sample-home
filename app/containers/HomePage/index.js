@@ -22,11 +22,19 @@ import SearchIcon from '@material-ui/icons/Search';
 import IconButton from '@material-ui/core/IconButton';
 import InputBase from '@material-ui/core/InputBase';
 import Menubar from 'react-responsive-multi-level-menu';
-import { Popover, Whisper, Button, ButtonToolbar } from 'rsuite';
+import { Popover, Whisper, ButtonToolbar } from 'rsuite';
 import 'rsuite/dist/styles/rsuite-default.css';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import Typography from '@material-ui/core/Typography';
+import PinDropIcon from '@material-ui/icons/PinDrop';
+import PhoneIcon from '@material-ui/icons/Phone';
+import MailOutlineIcon from '@material-ui/icons/MailOutline';
+import Button from '@material-ui/core/Button';
+import FacebookIcon from '@material-ui/icons/Facebook';
+import LinkedCameraRoundedIcon from '@material-ui/icons/LinkedCameraRounded';
+import SubscriptionsRoundedIcon from '@material-ui/icons/SubscriptionsRounded';
+import EmojiNatureRoundedIcon from '@material-ui/icons/EmojiNatureRounded';
 
 import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
 import EmojiObjectsIcon from '@material-ui/icons/EmojiObjects';
@@ -635,6 +643,92 @@ export function HomePage() {
                   </div>
                 </Grid>
               </Grid>
+            </div>
+          <div>
+            <div>
+              <div class="thankstittle">Get certified by us</div>
+              <div class="imagecertificate">
+                <img src="https://readmycourse.com/Images/rmc_certifcate_sample.jpg.jpg" />
+              </div>
+            </div>
+            <div className="thankstittle">
+              Thankyou for visiting us
+              </div>
+            <div style={{height:'50px'}}>
+              <div class="topcouver">
+            </div>
+            </div>
+            <div class="bottomtab">
+              <div>
+              <Grid container spacing={1}>
+                <Grid item xs={3.5}>
+                  <div class="gridalign">
+                      <div class="bottomtabtittles">Have questions?</div>
+                      <div>
+                        <PinDropIcon/>Noida 75,UP, india
+                      </div>
+                      <div>
+                        <PhoneIcon/>+91 7317553431
+                      </div>
+                      <div>
+                        <MailOutlineIcon/>info@ReadMycourse.com
+                      </div>
+                  </div>
+                </Grid>
+                  <Grid item xs={2.5}>
+                    <div class="gridalign">
+                      <div class="bottomtabtittles">Download App</div>
+                      <img src="" />
+                  </div>
+                </Grid>
+                <Grid item xs={2.5}>
+                    <div class="gridalign">
+                      <div class="bottomtabtittles">Links</div>
+                      <div>
+                        Home
+                      </div>
+                      <div>
+                        ClassRoom
+                      </div>
+                      <div>
+                        Courses
+                      </div>
+                      <div>Become Instructor</div>
+                      <div>Free Tests</div>
+                      <div>About US</div>
+                      <div>Student Login</div>
+                      <div>Instructor Login</div>
+                      <div>Terms and Conditions</div>
+                      <div>Privacy Policy</div>
+                  </div>
+                </Grid>
+                  <Grid item xs={3}>
+                    <div class="gridalign">
+                      <div class="bottomtabtittles">Subscribe us!</div>
+                      <div class="mailinput">
+                        <input type="text" placeholder="Enter email address" />
+                        <div>
+                          <Button>Subscribe</Button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="gridalign">
+                      <div class="bottomtabtittles">Connect with us!</div>
+                      <div class="connectlogo">
+                        <FacebookIcon style={{marginRight:'0.5rem'}} />
+                        <LinkedCameraRoundedIcon style={{marginRight:'0.5rem'}} />
+                        <SubscriptionsRoundedIcon style={{marginRight:'0.5rem'}} />
+                        <EmojiNatureRoundedIcon style={{marginRight:'0rem'}} />
+                      </div>
+                  </div>
+                </Grid>
+              </Grid>
+              </div>
+              <div style={{textAlign:'center',marginBottom:'2rem'}}>
+                Copyright @ 2021 All rights reserved ! ReadMyCourse
+              </div>
+            </div>
+
             </div>
         </div>
       </div>
