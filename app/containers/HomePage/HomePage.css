@@ -5,6 +5,9 @@
   margin: 0;
   max-width: 99.1vw;
 }
+.MuiSvgIcon-fontSizeSmall {
+  font-size: 2.25rem !important;
+}
 .hamBurgerMenu {
   margin-top: 0.5rem;
   height: 50px !important;
@@ -22,11 +25,14 @@
 }
 
 .mob-nav {
+  position: fixed;
+  z-index: 1;
   display: grid;
   grid-template-columns: 18% 67% auto;
   width: 100%;
   height: 4.5rem;
-  background-color: brown;
+  background-color: white;
+  box-shadow: 2px 2px 12px #b8b8bd;
   padding: 0.3rem 0.8rem 0 0.8rem;
 }
 .mob-nav img {
@@ -52,38 +58,48 @@
 .mega-menu {
   text-align: center !important;
   margin: auto !important;
-  margin-left: 5% !important;
-  width: 90%;
+  margin-left: 15% !important;
+  width: 80%;
   height: 3rem;
-  background-color: blueviolet !important;
-  color: white !important;
-  font-size: 1.2rem !important;
-  font-weight: bold !important;
+  background-color: none !important;
+  color: black !important;
+  font-size: 1.1rem !important;
+}
+.pop{
+  display: flex;
 }
 .popover {
-  top: 70px !important;
+  top: 80px !important;
   margin-top: 2rem !important;
-  width: 96vw;
-  height: 85vh;
+  width: 70vw;
+  height: 80vh;
   left: 0 !important;
-  margin: 0 2rem !important;
+  margin: 0 10% !important;
+  box-shadow: 2px 2px 7px #b8b8bd;
 }
 .rs-popover.placement-bottom > .rs-popover-arrow,
 .rs-popover.placement-top > .rs-popover-arrow {
-  left: 40% !important;
+  left: 18% !important;
 }
 .pop-cont {
+  width: 30vw;
+  display: flex;
+  padding-top: 0.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  justify-content: space-between;
   font-size: 1rem !important;
   font-weight: bold !important;
-  height: 4rem;
+  height: 3rem;
   cursor: pointer !important;
   color: grey !important;
 }
 .pop-cont:hover {
-  background-color: rgb(207, 204, 204);
+  background-color: rgb(230, 229, 229);
+  border-radius: 10px;
 }
 .pop-main {
-  height: 83vh !important;
+  height: 77vh !important;
   overflow: auto !important;
 }
 
@@ -114,10 +130,10 @@
   color: #9900aa;
 }
 .bookBtn {
-  background-color: brown !important;
+  background-color: #9900aa !important;
   color: white !important;
   border-radius: 80px !important;
-  width: 17rem;
+  width: 19rem;
   height: 4rem;
   font-size: 25px !important;
 }
@@ -165,6 +181,7 @@
 .curvetop {
   margin-top: 0rem;
   position: absolute;
+  margin: 0 1%;
   width: 97vw;
   height: auto;
   background: linear-gradient(
@@ -177,12 +194,19 @@
   );
   background-color: #9900aa;
   margin-bottom: 2rem;
-  border-radius: 50%;
+  border-radius: 45%;
 }
 .texttittle {
   font-size: 30px;
   font-weight: 900;
   color: #9900aa;
+  text-align: center;
+  margin-top: 2rem;
+}
+.textquestion{
+  font-size: 30px;
+  font-weight: 900;
+  color: #aa004f;
   text-align: center;
   margin-top: 2rem;
 }
@@ -192,6 +216,7 @@
 }
 .icons {
   text-align: center;
+  padding: 0 6%;
 }
 .icons img {
   zoom: 0.2;
@@ -248,19 +273,22 @@
   height: 10rem;
   border-radius: 50%;
 }
-.massegebox{
+.message{
   background-color: white;
   box-shadow: 0px 10px 20px rgb(202, 202, 202);
   width: 30rem;
   border-radius: 8px;
+  height: 15rem !important;
   padding: 1rem;
-  height: 9rem !important;
   margin-left: 2rem;
+}
+.massegebox{
+  height: 10rem !important;
+  overflow: auto;
 }
 .colorname{
   color: #9900aa;
   text-align: right;
-  margin-top: 1rem;
 }
 .thankstittle{
   font-size: 45px;
@@ -294,7 +322,7 @@
 .bottomtabtittles{
   font-size: 18px;
   font-weight: 900;
-margin-bottom: 2rem;
+  padding-bottom: 1rem;
 }
 .mailinput input{
   background-color: rgb(241, 241, 241);
@@ -323,4 +351,152 @@ margin-bottom: 2rem;
   width: 50vw;
   border: 1px solid black;
   box-shadow: 10px 10px 10px rgb(179, 179, 179);
+}
+.maeg{
+  text-align: center !important;
+  padding-top: 0.7rem;
+  margin-left: 2rem;
+  margin-top: 0.2rem;
+  font-size: 1.2rem !important;
+  cursor: pointer;
+  background-color: none !important;
+  border: none !important;
+}
+.join{
+  margin-top: 0.4rem !important;
+  width: 9rem;
+  font-size: 1.1rem;
+  margin-right: 1rem !important;
+  border: 1px solid brown !important;
+  height: 2.3rem !important;
+}
+.login{
+  height: 2.3rem !important;
+  margin-top: 0.4rem !important;
+  font-size: 1.1rem;
+  background-color: brown !important;
+  color: white !important;
+  border-radius: 80px !important;
+  width: 9rem;
+}
+.curve-overall{
+  height: 56rem;
+}
+.chats-cont{
+  padding: 0 7rem;
+}
+.chart-sub-cont{
+  display: flex;
+  margin-top: 2rem;
+}
+.chart-sub-cont1{
+  margin-left: 4rem;
+}
+.chart-sub-cont2{
+  margin-left: 2rem;
+}
+.massegebox1{
+  margin-right: 1rem;
+}
+
+@media only screen and (max-width: 600px) {
+  .overall {
+    text-align: center;
+    height: 10rem;
+    margin-left: 0;
+  }
+  .textcontect {
+    height: 8rem;
+    padding-left: 1em;
+    padding-top: 2rem;
+    font-size: 22px;
+    width: 90%;
+  }
+  .bookBtn {
+    border-radius: 80px !important;
+    width: 14rem;
+    height: 2.5rem;
+    font-size: 17px !important;
+  }
+  .curve {
+    margin-top: 0rem;
+    width: 100vw;
+  }
+  .subtittle {
+    font-size: 25px;
+  }
+  .textopacity {
+    font-size: 18px;
+    padding: 1rem 7%;
+  }
+  .texttittle {
+    font-size: 25px;
+    padding: 0 8%;
+  }
+  .textopacityalign {
+    padding: 1rem 8%;
+  }
+  .circleflex {
+    flex-direction: column;
+    align-items: center;
+  }
+  .circle {
+    margin-left: 0;
+    margin-bottom: 1rem;
+  }
+  .text-help {
+    font-size: 25px;
+    padding: 0 8%;
+  }
+  .logoscroll2 {
+    width: 40vw;
+    margin-top: 1rem;
+    margin-bottom: 5rem;
+  }
+  .curve-overall{
+    height: 118rem;
+  }
+  .chats-cont{
+    padding: 0 1rem;
+  }
+  .massegebox{
+    height: 10rem !important;
+    overflow: auto;
+    margin-left: 1rem;
+  }
+  .chatcard img{
+    width: 8rem;
+    height: 8rem;
+    border-radius: 50%;
+  }
+  .massegebox1{
+    margin-right: 1rem;
+  }
+  .chart-sub-cont1{
+    margin-left: 0rem;
+  }
+  .chart-sub-cont2{
+    margin-left: 0rem;
+  }
+  .background {
+    padding-top: 5rem;
+  }
+  .thankstittle{
+    font-size: 30px;
+    margin-bottom: 1rem; 
+  }
+  .imagecertificate img{
+    width: 90vw;
+  }
+  .gridalign{
+    margin: 0rem ;
+    margin-left: 4rem;
+    margin-bottom: 2rem;
+  }
+  .mailinput Button{
+    width: 50vw;
+  }
+  .gridalign div{
+    padding-bottom: 1rem;
+  }
 }

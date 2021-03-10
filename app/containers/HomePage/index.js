@@ -35,25 +35,19 @@ import FacebookIcon from '@material-ui/icons/Facebook';
 import LinkedCameraRoundedIcon from '@material-ui/icons/LinkedCameraRounded';
 import SubscriptionsRoundedIcon from '@material-ui/icons/SubscriptionsRounded';
 import EmojiNatureRoundedIcon from '@material-ui/icons/EmojiNatureRounded';
+import Card from '@material-ui/core/Card';
+import CardActionArea from '@material-ui/core/CardActionArea';
+import CardActions from '@material-ui/core/CardActions';
+import CardContent from '@material-ui/core/CardContent';
+import CardMedia from '@material-ui/core/CardMedia';
 
 import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
-import EmojiObjectsIcon from '@material-ui/icons/EmojiObjects';
+import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import saga from './saga';
 import reducer from './reducer';
 import makeSelectHomePage from './selectors';
 
-TabPanel.propTypes = {
-  children: PropTypes.node,
-  index: PropTypes.any.isRequired,
-  value: PropTypes.any.isRequired,
-};
 
-function a11yProps(index) {
-  return {
-    id: `scrollable-auto-tab-${index}`,
-    'aria-controls': `scrollable-auto-tabpanel-${index}`,
-  };
-}
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -63,6 +57,10 @@ const useStyles = makeStyles((theme) => ({
     '& > *': {
       margin: theme.spacing(1),
     },
+  },
+  footer:{
+    fontSize:'1.5rem',
+    marginRight:'2rem'
   },
   grid:{
     paddingTop:'1rem',
@@ -222,13 +220,11 @@ const Elements = () => {
   const [index, setIndex] = useState(-1);
 
   return (
-    <Grid container spacing={1}>
-      <Grid item xs={6} className="pop-main">
+    <div className='pop'>
+      <div item xs={6} className="pop-main">
         {menuItems &&
           menuItems.map((ele, i) => (
-            <Grid
-              container
-              spacing={1}
+            <div
               className="pop-cont"
               onMouseOver={() => {
                 setData(ele.items);
@@ -236,30 +232,32 @@ const Elements = () => {
               }}
               style={{
                 backgroundColor: index === i ? 'rgb(207, 204, 204)' : '',
+                borderRadius: index === i?'10px':''
               }}
             >
-              <Grid item key={i} xs={10}>
+              <div >
                 {ele.value}
-              </Grid>
+              </div>
               {ele.items.length > 0 ? (
-                <Grid item xs={2}>
+                <div item >
                   <ArrowForwardIosIcon />
-                </Grid>
+                </div>
               ) : null}
-            </Grid>
+            </div>
           ))}
-      </Grid>
-      <Grid item xs={6} className="pop-main">
+      </div>
+      <div className="pop-main" style={{marginLeft:'1rem'}}>
         {data &&
           data.map((ele) => (
-            <Grid container spacing={1} className="pop-cont">
-              <Grid item xs={12}>
+            <div className="pop-cont">
+              <div >
                 {ele.value}
-              </Grid>
-            </Grid>
+              </div>
+            </div>
           ))}
-      </Grid>
-    </Grid>
+      </div>
+    </div>
+
   );
 };
 
@@ -268,61 +266,6 @@ const speaker = (
     <Elements />
   </Popover>
 );
-
-const AntTabs = withStyles({
-  root: {
-    margin:'0',
-    padding:'0',
-    borderBottom: '1px solid #e8e8e8',
-  },
-  indicator: {
-    backgroundColor: 'rgb(228, 99, 13)',
-  },
-})(Tabs);
-
-const AntTab = withStyles((theme) => ({
-  root: {
-    textTransform: 'none',
-    minWidth: 20,
-    fontWeight: theme.typography.fontWeightRegular,
-    '&:hover': {
-      color: '#FE4500',
-      opacity: 1,
-    },
-    '&$selected': {
-      color: '#FE4500',
-      fontWeight: 'bold',
-      fontSize: '16px',
-    },
-    '&:focus': {
-      color: 'rgb(228, 99, 13)',
-    },
-  },
-  selected: {},
-}))((props) => <Tab disableRipple {...props} />);
-
-function TabPanel(props) {
-  const { children, value, index, ...other } = props;
-
-  return (
-    <div
-      style={{ marginTop: '1rem' }}
-      role="tabpanel"
-      hidden={value !== index}
-      id={`scrollable-auto-tabpanel-${index}`}
-      aria-labelledby={`scrollable-auto-tab-${index}`}
-      {...other}
-    >
-      {value === index && <Typography>{children}</Typography>}
-    </div>
-  );
-}
-
-TabPanel.propTypes = {
-  children: PropTypes.node,
-  index: PropTypes.any.isRequired,
-  value: PropTypes.any.isRequired,
-};
 
 export function HomePage() {
   const classes = useStyles();
@@ -398,7 +341,7 @@ export function HomePage() {
                 />
               </div>
               <div className="search-cont">
-                <div className="search">
+                <div className="search" style={{border:'1px solid grey'}}>
                   <IconButton type="submit" aria-label="search">
                     <SearchIcon />
                   </IconButton>
@@ -421,7 +364,7 @@ export function HomePage() {
           </>
         ) : (
             <Grid container spacing={1} className={classes.grid}>
-              <Grid item xs={2}>
+              <Grid item xs={2} style={{paddingLeft:'1rem'}}>
                 <img
                   src="https://readmycourse.com/Images/site-logo-v2-full.png"
                   alt="logo"
@@ -431,7 +374,9 @@ export function HomePage() {
               <Grid item xs={2}>
                 <ButtonToolbar>
                   <Whisper placement="bottom" trigger="click" speaker={speaker}>
-                    <Button className="mega-menu">All Course</Button>
+                    <Button className="mega-menu">All Course
+                    <span><ExpandMoreIcon /></span>
+                    </Button>
                   </Whisper>
                 </ButtonToolbar>
               </Grid>
@@ -448,13 +393,13 @@ export function HomePage() {
                 </div>
               </Grid>
               <Grid item xs={2}>
-                <div>MAEG Award</div>
+                <Button className='maeg'>MAEG Award</Button>
               </Grid>
-              <Grid item xs={2}>
-                <Button variant="contained" color="primary">
-                  Primary
+              <Grid item xs={3}>
+                <Button variant="outlined" color="secondary" className='join'>
+                  Join Free
                 </Button>
-                <Button variant="contained" color="primary">
+                <Button className='login' variant="outlined" size="large" color="primary" >
                   Login
                 </Button>
               </Grid>
@@ -511,7 +456,7 @@ export function HomePage() {
             </Tabs>
           </div>
         </div>
-        <div style={{ height: '56rem' }}>
+        <div className='curve-overall'>
           <div className="curvetop">
             <div className="texttittle">benefites of learning live</div>
             <div className="textopacityalign">
@@ -519,7 +464,7 @@ export function HomePage() {
             </div>
             <div className="icons">
               <Grid container spacing={1}>
-                <Grid item xs={5}>
+                <Grid item xs={12} sm={4}>
                   <div>
                     <img src="https://readmycourse.com/Images/icon/web_icons/bulb.png" />
                     <div className="textalign">
@@ -528,7 +473,7 @@ export function HomePage() {
                     </div>
                   </div>
                 </Grid>
-                <Grid item xs={2}>
+                <Grid item xs={12} sm={4}>
                   <div>
                     <img src="https://readmycourse.com/Images/icon/web_icons/chat.png" />
                     <div className="textalign">
@@ -537,7 +482,7 @@ export function HomePage() {
                     </div>
                   </div>
                 </Grid>
-                <Grid item xs={5}>
+                <Grid item xs={12} sm={4}>
                   <div>
                     <img src="https://readmycourse.com/Images/icon/web_icons/book.png" />
                     <div className="textalign">
@@ -596,49 +541,62 @@ export function HomePage() {
             Join our specially designed live courses
           </div>
           <div>
+            <div>
 
+            </div>
           </div>
+        </div>
+        <div className="textquestion">
+          Why should you choose <span style={{color:'#9900aa'}}>us</span>?
         </div>
         <div>
           <div className="chats">
-              <Grid container spacing={1}>
-                <Grid item xs={6}>
-                  <div style={{display:'flex',marginTop:'2rem'}}>
+              <Grid container spacing={1} className='chats-cont'>
+                <Grid item xs={12} sm={6}>
+                  <div className='chart-sub-cont'>
                     <div class="chatcard">
-                      <img src="https://images.pexels.com/photos/255379/pexels-photo-255379.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" />
+                      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcStN_DfwUJ7o3S32kOPA111HHQsZFgzTlJrFw&usqp=CAU" />
                     </div>
-                    <div className="massegebox">
-                      <span>Technical courses of ReadMyCourse can really satisfy to our student’s hunger for learning and development. It can also help to students for correctly automating, storing, handling, measuring, analysing data and information processing. </span>
-                       <div class="colorname">Anna Bashir Nakhoon</div>
-                  </div>
+                    <div className='message'>
+                      <div className="massegebox">
+                        <span>Technical courses of ReadMyCourse can really satisfy to our student’s hunger for learning and development. It can also help to students for correctly automating, storing, handling, measuring, analysing data and information processing. </span>
+                      </div>
+                      <div class="colorname">Anna Bashir Nakhoon</div>
+                    </div>
                 </div>
-                <div style={{display:'flex',marginTop:'2rem'}}>
-                    <div className="massegebox">
-                      <span>Technical courses of ReadMyCourse can really satisfy to our student’s hunger for learning and development. It can also help to students for correctly automating, storing, handling, measuring, analysing data and information processing. </span>
-                       <div class="colorname">Anna Bashir Nakhoon</div>
-                  </div>
+                <div className='chart-sub-cont'>
+                    <div className='message massegebox1'>
+                      <div className="massegebox">
+                        <span>Technical courses of ReadMyCourse can really satisfy to our student’s hunger for learning and development. It can also help to students for correctly automating, storing, handling, measuring, analysing data and information processing. </span>
+                      </div>
+                      <div class="colorname">Anna Bashir Nakhoon</div>
+                    </div>
                     <div class="chatcard">
-                      <img src="https://images.pexels.com/photos/255379/pexels-photo-255379.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" />
+                      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcStN_DfwUJ7o3S32kOPA111HHQsZFgzTlJrFw&usqp=CAU" />
                     </div>
                   </div>
                 </Grid>
-                <Grid item xs={6}>
-                  <div style={{display:'flex',marginTop:'2rem'}}>
+                <Grid item xs={12} sm={6}>
+                  <div className='chart-sub-cont chart-sub-cont1'>
                     <div class="chatcard">
-                      <img src="https://images.pexels.com/photos/255379/pexels-photo-255379.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" />
+                      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcStN_DfwUJ7o3S32kOPA111HHQsZFgzTlJrFw&usqp=CAU" />
                     </div>
-                    <div className="massegebox">
-                      <span>Technical courses of ReadMyCourse can really satisfy to our student’s hunger for learning and development. It can also help to students for correctly automating, storing, handling, measuring, analysing data and information processing. </span>
-                       <div class="colorname">Anna Bashir Nakhoon</div>
-                  </div>
+                    <div className='message'>
+                      <div className="massegebox">
+                        <span>Technical courses of ReadMyCourse can really satisfy to our student’s hunger for learning and development. It can also help to students for correctly automating, storing, handling, measuring, analysing data and information processing. </span>
+                      </div>
+                      <div class="colorname">Anna Bashir Nakhoon</div>
+                    </div>
                 </div>
-                <div style={{display:'flex',marginTop:'2rem'}}>
-                    <div className="massegebox">
-                      <span>Technical courses of ReadMyCourse can really satisfy to our student’s hunger for learning and development. It can also help to students for correctly automating, storing, handling, measuring, analysing data and information processing. </span>
-                       <div class="colorname">Anna Bashir Nakhoon</div>
-                  </div>
+                <div className='chart-sub-cont chart-sub-cont2'>
+                <div className='message massegebox1'>
+                      <div className="massegebox">
+                        <span>Technical courses of ReadMyCourse can really satisfy to our student’s hunger for learning and development. It can also help to students for correctly automating, storing, handling, measuring, analysing data and information processing. </span>
+                      </div>
+                      <div class="colorname">Anna Bashir Nakhoon</div>
+                    </div>
                     <div class="chatcard">
-                      <img src="https://images.pexels.com/photos/255379/pexels-photo-255379.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" />
+                      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcStN_DfwUJ7o3S32kOPA111HHQsZFgzTlJrFw&usqp=CAU" />
                     </div>
                   </div>
                 </Grid>
@@ -661,27 +619,27 @@ export function HomePage() {
             <div class="bottomtab">
               <div>
               <Grid container spacing={1}>
-                <Grid item xs={3.5}>
+                <Grid item xs={12} sm={3}>
                   <div class="gridalign">
                       <div class="bottomtabtittles">Have questions?</div>
                       <div>
-                        <PinDropIcon/>Noida 75,UP, india
+                        <PinDropIcon className={classes.footer}/>Noida 75,UP, india
                       </div>
                       <div>
-                        <PhoneIcon/>+91 7317553431
+                        <PhoneIcon className={classes.footer}/>+91 7317553431
                       </div>
                       <div>
-                        <MailOutlineIcon/>info@ReadMycourse.com
+                        <MailOutlineIcon className={classes.footer}/>info@ReadMycourse.com
                       </div>
                   </div>
                 </Grid>
-                  <Grid item xs={2.5}>
+                  <Grid item xs={12} sm={3}>
                     <div class="gridalign">
                       <div class="bottomtabtittles">Download App</div>
                       <img src="" />
                   </div>
                 </Grid>
-                <Grid item xs={2.5}>
+                <Grid item xs={12} sm={3}>
                     <div class="gridalign">
                       <div class="bottomtabtittles">Links</div>
                       <div>
@@ -702,13 +660,13 @@ export function HomePage() {
                       <div>Privacy Policy</div>
                   </div>
                 </Grid>
-                  <Grid item xs={3}>
+                  <Grid item xs={12} sm={3}>
                     <div class="gridalign">
                       <div class="bottomtabtittles">Subscribe us!</div>
                       <div class="mailinput">
                         <input type="text" placeholder="Enter email address" />
                         <div>
-                          <Button>Subscribe</Button>
+                          <Button className='subscribe'>Subscribe</Button>
                         </div>
                       </div>
                     </div>
