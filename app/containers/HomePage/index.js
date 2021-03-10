@@ -35,11 +35,8 @@ import FacebookIcon from '@material-ui/icons/Facebook';
 import LinkedCameraRoundedIcon from '@material-ui/icons/LinkedCameraRounded';
 import SubscriptionsRoundedIcon from '@material-ui/icons/SubscriptionsRounded';
 import EmojiNatureRoundedIcon from '@material-ui/icons/EmojiNatureRounded';
-import Card from '@material-ui/core/Card';
-import CardActionArea from '@material-ui/core/CardActionArea';
-import CardActions from '@material-ui/core/CardActions';
-import CardContent from '@material-ui/core/CardContent';
-import CardMedia from '@material-ui/core/CardMedia';
+import Rating from '@material-ui/lab/Rating';
+import Box from '@material-ui/core/Box';
 
 import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
@@ -318,6 +315,7 @@ export function HomePage() {
   const color = '#c62860';
   const animation = ['slideIn', 'slideOut'];
   const [value, setValue] = React.useState(0);
+  const [starValue, setStarValue] = React.useState(2.5);
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
@@ -542,7 +540,28 @@ export function HomePage() {
           </div>
           <div>
             <div>
-
+              <div class="cardmain">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcStN_DfwUJ7o3S32kOPA111HHQsZFgzTlJrFw&usqp=CAU" />
+                <div class="cardtittle">
+                  Python for BioInformatics
+                </div>
+                <div class="card-author">
+                  By karthick
+                </div>
+                <div class="star-value">
+                    <Rating name="read-only" value={starValue} readOnly precision={0.5} />
+                    <div>(2.5)</div>
+                </div>
+                <div class="number-of-joined">
+                  117+ students joined
+                </div>
+                <div class="card-buttom">
+                  <Button>Join Free</Button>
+                  <div>
+                    <Button>More details</Button>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>

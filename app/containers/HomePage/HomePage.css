@@ -102,8 +102,61 @@
   height: 77vh !important;
   overflow: auto !important;
 }
+/* CARD... */
 
-/* home */
+.cardmain {
+  width: 25vw;
+  height: 65vh;
+  background-color: white;
+  border: 1px solid rgb(202, 202, 202);
+  border-radius: 10px;
+  margin-left: 5rem;
+  margin-top: 1rem;
+  box-shadow: 10px 10px 10px rgb(209, 209, 209);
+}
+.cardmain img {
+  width: 100%;
+  padding: 1.5%;
+  height: 10rem;
+  border-radius: 10px;  
+}
+.cardtittle{
+  font-size: 23px;
+  font-weight: 900;
+  color: black;
+  width: 100%;
+  padding: 10px 1rem;
+}
+.card-author{
+  color: gray;
+  font-size: 18px;
+  padding: 0px 1rem;
+}
+.star-value{
+  padding: 2rem 1rem 0 1rem;
+  display: flex;
+}
+.star-value div{
+  margin-left: 1rem;
+  font-weight: 900;
+  font-size: 15px;
+}
+.number-of-joined{
+  padding: 10px 1rem;
+  font-weight: 900;  
+}
+.card-buttom{
+  display: flex;
+  justify-content: space-around;
+}
+.card-buttom Button{
+  background-color: #f3cddb;
+  border: 1px solid #c9a4cc;
+  margin: 10px 0rem;
+  width: 8rem;
+}
+
+  /* home */
 
 .background img {
   width: 98.8vw;
