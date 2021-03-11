@@ -65,7 +65,7 @@
   color: black !important;
   font-size: 1.1rem !important;
 }
-.pop{
+.pop {
   display: flex;
 }
 .popover {
@@ -105,12 +105,13 @@
 /* CARD... */
 
 .cardmain {
-  width: 25vw;
-  height: 65vh;
+  width: 90%;
+  padding-bottom: 1rem;
+  min-height: 1vh;
   background-color: white;
   border: 1px solid rgb(202, 202, 202);
   border-radius: 10px;
-  margin-left: 5rem;
+  margin: auto;
   margin-top: 1rem;
   box-shadow: 10px 10px 10px rgb(209, 209, 209);
 }
@@ -118,49 +119,50 @@
   width: 100%;
   padding: 1.5%;
   height: 10rem;
-  border-radius: 10px;  
+  border-radius: 10px;
 }
-.cardtittle{
+.cardtittle {
   font-size: 23px;
   font-weight: 900;
   color: black;
   width: 100%;
   padding: 10px 1rem;
 }
-.card-author{
+.card-author {
   color: gray;
   font-size: 18px;
   padding: 0px 1rem;
 }
-.star-value{
+.star-value {
   padding: 2rem 1rem 0 1rem;
   display: flex;
 }
-.star-value div{
+.star-value div {
   margin-left: 1rem;
   font-weight: 900;
   font-size: 15px;
 }
-.number-of-joined{
+.number-of-joined {
   padding: 10px 1rem;
-  font-weight: 900;  
+  font-weight: 900;
 }
-.card-buttom{
+.card-buttom {
   display: flex;
   justify-content: space-around;
 }
-.card-buttom Button{
+.card-buttom Button {
   background-color: #f3cddb;
   border: 1px solid #c9a4cc;
   margin: 10px 0rem;
   width: 8rem;
 }
 
-  /* home */
+/* home */
 
 .background img {
   width: 98.8vw;
-  opacity: 0.4;
+  opacity: 1;
+
   position: absolute;
 }
 .overall {
@@ -183,26 +185,16 @@
   color: #9900aa;
 }
 .bookBtn {
-  background-color: #9900aa !important;
+  background-color: #b83b5e !important;
   color: white !important;
   border-radius: 80px !important;
   width: 19rem;
   height: 4rem;
   font-size: 25px !important;
 }
-.curve {
-  margin-top: 0rem;
-  position: absolute;
-  width: 98.8vw;
-  opacity: 0.4;
-  height: 50px;
-  background: linear-gradient(#fef6f7, #c9a4cc);
-  background-color: #9900aa;
-  border-bottom-left-radius: 50%;
-  border-bottom-right-radius: 50%;
-}
+
 .subtittle {
-  padding-top: 4rem;
+  padding-top: 13rem;
   text-align: center;
   font-size: 40px;
   font-weight: bold;
@@ -221,6 +213,15 @@
 .logos img {
   zoom: 0.3;
   width: 20rem;
+  height: 27rem;
+  margin-left: 7rem;
+  margin-right: 7rem;
+  border: none !important;
+}
+.logos2 img {
+  zoom: 0.3;
+  width: 20rem;
+  height: 27rem;
   margin-left: 7rem;
   margin-right: 7rem;
   border: none !important;
@@ -231,43 +232,50 @@
   margin-bottom: 3rem;
   width: 58vw;
 }
-.curvetop {
-  margin-top: 0rem;
+.curve-mid {
+  width: 100%;
+  min-height: 50rem;
+  max-height: 63rem;
   position: absolute;
-  margin: 0 1%;
-  width: 97vw;
-  height: auto;
-  background: linear-gradient(
-    #f1d7f3,
-    #f2e9f3,
-    #ffffff,
-    #ffffff,
-    #f2e9f3,
-    #f1d7f3
-  );
-  background-color: #9900aa;
-  margin-bottom: 2rem;
-  border-radius: 45%;
+  z-index: 0;
+}
+.join-text {
+  font-size: 30px;
+  font-weight: 900;
+  color: #9900aa;
+  text-align: center;
+  margin-top: 13rem;
 }
 .texttittle {
   font-size: 30px;
   font-weight: 900;
   color: #9900aa;
   text-align: center;
-  margin-top: 2rem;
 }
-.textquestion{
+
+.texttittle1 {
+  position: relative;
+  font-size: 30px;
+  padding-top: 5rem;
+  font-weight: 900;
+  color: #9900aa;
+  text-align: center;
+}
+.textquestion {
   font-size: 30px;
   font-weight: 900;
-  color: #aa004f;
+  color: #b83b5e;
   text-align: center;
   margin-top: 2rem;
 }
 .textopacityalign {
+  position: relative;
   color: gray;
+  font-size: 18px;
   text-align: center;
 }
 .icons {
+  position: relative;
   text-align: center;
   padding: 0 6%;
 }
@@ -278,12 +286,21 @@
 .textalign {
   color: gray !important;
   width: 10rem;
+  font-size: 18px;
+  margin: auto;
+}
+
+.textalign1 {
+  color: gray !important;
+  width: 10rem;
+  position: relative;
   margin: auto;
 }
 .textalign div {
   color: rgb(58, 57, 57) !important;
 }
 .livetittle {
+  position: relative;
   color: #aa004f;
   text-align: center;
   font-size: 20px;
@@ -293,19 +310,21 @@
   margin-top: 2rem;
   justify-content: center;
 }
-.circle {
+.circle img {
   margin-left: 1rem;
-  background-color: #9900aa;
-  opacity: 0.3;
+  opacity: 0.9;
   width: 6rem;
   height: 6rem;
+  /* border: 1px solid #baadbb; */
   border-radius: 50%;
+  padding-bottom: 10px;
 }
 .text-help {
   font-size: 30px;
   font-weight: 900;
   text-align: center;
   color: black;
+  position: relative;
   margin-top: 3rem;
 }
 .text-help span {
@@ -318,15 +337,15 @@
   margin-top: 1rem;
   margin-bottom: 5rem;
 }
-.chatcard{
+.chatcard {
   display: flex !important;
 }
-.chatcard img{
+.chatcard img {
   width: 10rem;
   height: 10rem;
   border-radius: 50%;
 }
-.message{
+.message {
   background-color: white;
   box-shadow: 0px 10px 20px rgb(202, 202, 202);
   width: 30rem;
@@ -335,77 +354,66 @@
   padding: 1rem;
   margin-left: 2rem;
 }
-.massegebox{
+.massegebox {
   height: 10rem !important;
   overflow: auto;
 }
-.colorname{
+.colorname {
   color: #9900aa;
   text-align: right;
 }
-.thankstittle{
+.thankstittle {
   font-size: 45px;
   font-weight: 900;
   color: #9900aa;
   text-align: center;
-  margin-top: 2rem; 
+  margin-top: 2rem;
 }
-.topcouver{
-  margin-top: 0rem;
-  position: absolute;
-  width: 98.8vw;
-  height: 50px;
-  background: linear-gradient(
-    #f1d7f3,
-    #f2e9f3,
-    #f2e9f3,
-    #fbf6fc
-  );
-  margin-bottom: 2rem;
-  border-top-right-radius: 50%;
-  border-top-left-radius: 50%;
+.bottomimg {
+  width: 98.85vw;
+  height: 30vh;
 }
-.bottomtab{
+.bottomtab {
   background-color: #fbf6fc;
-  margin: 0;
+  margin-top: 5rem;
 }
-.gridalign{
-  margin: 5rem ;
+.gridalign {
+  margin: 5rem;
 }
-.bottomtabtittles{
+.bottomtabtittles {
   font-size: 18px;
   font-weight: 900;
   padding-bottom: 1rem;
 }
-.mailinput input{
+.mailinput input {
   background-color: rgb(241, 241, 241);
   outline: none !important;
   border: none !important;
   height: 3rem;
   text-align: center;
 }
-.mailinput Button{
+.mailinput Button {
   background-color: #aa004f;
   width: 16vw;
   margin-top: 2rem;
   color: white;
 }
-.mailinput Button:hover{
+.mailinput Button:hover {
   background-color: #aa004f;
   color: white;
 }
-.connectlogo{
+.connectlogo {
   zoom: 1.2;
 }
-.imagecertificate{
+.imagecertificate {
   text-align: center;
 }
-.imagecertificate img{
+.imagecertificate img {
   width: 50vw;
   border: 1px solid black;
   box-shadow: 10px 10px 10px rgb(179, 179, 179);
 }
-.maeg{
+.maeg {
   text-align: center !important;
   padding-top: 0.7rem;
   margin-left: 2rem;
@@ -414,41 +422,48 @@
   cursor: pointer;
   background-color: none !important;
   border: none !important;
+  margin-left: 1rem !important;
 }
-.join{
+.maeg:hover {
+  color: black !important;
+  border: none !important;
+  text-decoration: none !important;
+}
+.join {
   margin-top: 0.4rem !important;
   width: 9rem;
   font-size: 1.1rem;
   margin-right: 1rem !important;
-  border: 1px solid brown !important;
+  border: 1px solid #b83b5e !important;
   height: 2.3rem !important;
+  color: #b83b5e !important;
 }
-.login{
+.login {
   height: 2.3rem !important;
   margin-top: 0.4rem !important;
   font-size: 1.1rem;
-  background-color: brown !important;
+  background-color: #b83b5e !important;
   color: white !important;
   border-radius: 80px !important;
   width: 9rem;
 }
-.curve-overall{
-  height: 56rem;
+.curve-overall {
+  height: 51rem;
 }
-.chats-cont{
+.chats-cont {
   padding: 0 7rem;
 }
-.chart-sub-cont{
+.chart-sub-cont {
   display: flex;
   margin-top: 2rem;
 }
-.chart-sub-cont1{
+.chart-sub-cont1 {
   margin-left: 4rem;
 }
-.chart-sub-cont2{
+.chart-sub-cont2 {
   margin-left: 2rem;
 }
-.massegebox1{
+.massegebox1 {
   margin-right: 1rem;
 }
 
@@ -457,13 +472,14 @@
     text-align: center;
     height: 10rem;
     margin-left: 0;
+    width: 88vw;
   }
   .textcontect {
-    height: 8rem;
+    height: 10rem;
     padding-left: 1em;
-    padding-top: 2rem;
+    padding-top: 3rem;
     font-size: 22px;
-    width: 90%;
+    width: 100%;
   }
   .bookBtn {
     border-radius: 80px !important;
@@ -493,7 +509,7 @@
     flex-direction: column;
     align-items: center;
   }
-  .circle {
+  .circle img {
     margin-left: 0;
     margin-bottom: 1rem;
   }
@@ -506,50 +522,101 @@
     margin-top: 1rem;
     margin-bottom: 5rem;
   }
-  .curve-overall{
+  .curve-overall {
     height: 118rem;
   }
-  .chats-cont{
+  .chats-cont {
     padding: 0 1rem;
   }
-  .massegebox{
+  .massegebox {
     height: 10rem !important;
     overflow: auto;
     margin-left: 1rem;
   }
-  .chatcard img{
+  .chatcard img {
     width: 8rem;
     height: 8rem;
     border-radius: 50%;
   }
-  .massegebox1{
+  .massegebox1 {
     margin-right: 1rem;
   }
-  .chart-sub-cont1{
+  .chart-sub-cont1 {
     margin-left: 0rem;
   }
-  .chart-sub-cont2{
+  .chart-sub-cont2 {
     margin-left: 0rem;
   }
   .background {
     padding-top: 5rem;
   }
-  .thankstittle{
-    font-size: 30px;
-    margin-bottom: 1rem; 
+  .background img {
+    width: 100vw;
+    height: 23rem;
   }
-  .imagecertificate img{
+  .thankstittle {
+    font-size: 30px;
+    margin-bottom: 1rem;
+  }
+  .imagecertificate img {
     width: 90vw;
   }
-  .gridalign{
-    margin: 0rem ;
+  .gridalign {
+    margin: 0rem;
     margin-left: 4rem;
     margin-bottom: 2rem;
   }
-  .mailinput Button{
+  .mailinput Button {
     width: 50vw;
   }
-  .gridalign div{
+  .gridalign div {
     padding-bottom: 1rem;
+  }
+  .MuiTabs-scrollButtonsDesktop {
+    display: block !important;
+  }
+  .bottomimg {
+    width: 100vw;
+    height: 30vh;
+  }
+  .bottomtab {
+    background-color: #fbf6fc;
+    margin-top: 10rem;
+    width: 100vw;
+    padding-top: 5rem;
+  }
+  .cardmain {
+    width: 80%;
+    min-height: 5vh;
+    margin-left: 2.5rem;
+  }
+  .logoscroll2 {
+    background: none;
+    margin: auto;
+    width: 55vw;
+    margin-top: 1rem;
+    margin-bottom: 5rem;
+  }
+  .logos img {
+    width: 20.5rem;
+    margin-left: 6rem;
+    margin-right: 3rem;
+  }
+  .logos2 img {
+    width: 20.5rem;
+    margin-left: 3.5rem;
+    margin-right: 3rem;
+  }
+  .MuiTabScrollButton-root {
+    margin: auto !important;
+  }
+  .curve-mid {
+    min-height: 145rem !important;
+  }
+  .texttittle1 {
+    padding-top: 10rem !important;
+  }
+  .join-text {
+    margin-top: 30rem;
   }
 }

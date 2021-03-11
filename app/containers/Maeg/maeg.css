@@ -1,0 +1,159 @@
+.MAEG-Award {
+  width: 100%;
+  background-color: #6f42c1;
+  min-height: 15vh;
+  padding: 1.5rem 3rem;
+}
+.head-tittle {
+  font-size: 30px;
+  color: white;
+  font-weight: 300;
+}
+.sub-tittle {
+  color: white;
+  margin-top: 1rem;
+}
+.MAEG-Award Button {
+  background-color: #3498db;
+  margin-top: 1rem;
+  color: white;
+  font-weight: 900;
+  font-size: 25px;
+  border-bottom: 5px solid #2980b9;
+  text-shadow: 0px -2px #2980b9;
+  width: 15rem;
+}
+
+.MAEG-Award Button:hover {
+  background-color: #55a8e0;
+}
+.overallgrid {
+  margin: 1.5rem 3rem;
+}
+.grid-image img {
+  width: 40vw;
+  text-align: center !important;
+  margin-top: 1rem;
+  box-shadow: 10px 10px 30px rgb(212, 212, 212);
+}
+.content {
+  padding: 1rem;
+}
+.grid-tittle {
+  font-size: 30px;
+  font-weight: 900;
+  line-height: 1.5;
+}
+.subcontent {
+  padding-top: 1rem;
+  color: rgb(65, 65, 65);
+  line-height: 1.8;
+  font-size: 25px;
+}
+.question-content {
+  margin-top: 2rem;
+  color: rgb(65, 65, 65);
+  line-height: 1.8;
+  font-size: 30px;
+  text-align: center;
+}
+.card {
+  width: 90%;
+  height: 23rem;
+  background-color: white;
+  margin: 1rem 0 1rem 1rem;
+  border: 1px solid rgb(167, 167, 167);
+}
+.card-img {
+  width: 100%;
+  text-align: center;
+}
+.card img {
+  width: 6rem;
+  margin: 1rem;
+}
+.card-contect {
+  font-size: 25px;
+  font-weight: 900;
+  margin: 0;
+  margin-top: 1rem;
+  text-align: center;
+}
+.card-sub-contect {
+  color: #827f7f;
+  line-height: 1.8;
+  font-size: 15px;
+  margin: 1rem 1.2rem;
+  font-weight: 900;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+.about-us-head-tittle {
+  margin-top: 2rem;
+  text-align: center;
+  font-size: 35px;
+}
+.about-us {
+  width: 93%;
+  margin: 1rem 3rem 0 3rem;
+  background-color: rgba(226, 226, 226, 0.226);
+  min-height: 10vh;
+  padding: 2rem 3rem;
+}
+.about-us-tittle {
+  font-size: 30px;
+}
+.about-us-sub-tittle {
+  font-size: 16.8px;
+  margin-top: 2rem;
+  line-height: 1.8;
+  color: rgba(0, 0, 0, 0.5);
+}
+.about-us-sub-tittle span {
+  color: rgb(109, 109, 109) !important;
+  font-weight: 900;
+}
+.about-us-mission-tittle {
+  font-size: 30px;
+  font-weight: 300;
+  margin-top: 1rem;
+}
+
+@media only screen and (max-width: 600px) {
+  .card {
+    width: 85vw;
+  }
+  .overallgrid {
+    margin: 1rem 1.5rem;
+  }
+  .grid-image img {
+    width: 90vw;
+  }
+  .content {
+    padding: 0.5rem;
+  }
+  .grid-tittle {
+    font-size: 25px;
+  }
+  .subcontent {
+    font-size: 22px;
+  }
+  .MAEG-Award {
+    padding: 1.5rem 2rem;
+  }
+  .head-tittle {
+    text-align: center;
+    font-size: 25px;
+    font-weight: 500;
+  }
+  .sub-tittle {
+    margin-top: 1.5rem;
+  }
+  .MAEG-Award {
+    text-align: center;
+  }
+  .MAEG-Award Button {
+    margin-top: 2rem;
+    zoom: 0.8;
+  }
+}

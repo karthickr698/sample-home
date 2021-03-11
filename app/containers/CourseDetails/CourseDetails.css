@@ -1,0 +1,119 @@
+body{
+    padding: 0 !important;
+    margin: 0 !important;
+}
+.topmaindiv-img{
+    position:absolute;
+    width:100%;
+    height:60vh;
+}
+.top-main-div{
+    width: 60vw;
+    position: relative;
+    min-height: 60vh;
+    padding: 2rem 1rem 4rem 1rem;
+    padding: 10px;
+    background: linear-gradient(to right,rgb(0, 0, 99),rgb(0, 0, 117),rgb(0, 0, 179),rgb(0, 0, 192));
+}
+.page-content{
+    font-size: 20px;
+    color: white;
+    opacity: 0.5;
+}
+.live-content{
+    color: yellow;
+    font-size: 20px;
+    opacity: 0.8;
+    margin-top: 2rem;
+}
+.tittle{
+    margin-top: 15px;
+    font-size: 30px;
+    font-weight: 900;
+    color: white;
+}
+.star-Rating{
+    margin-top: 0 !important;
+    display: flex;
+}
+.star-Rating div{
+    margin-top: 2px !important;
+    color: yellow;
+    font-size: 15px;
+    opacity: 0.8;
+    font-weight: 600;
+}
+.fees-content{
+    font-size: 20px;
+    color: white;
+    margin-top: 1.5rem;
+}
+.rigister-content{
+    width: 22.5rem;
+    color: rgb(160, 160, 160);
+    font-size: 18px;
+}
+.grid-table-content{
+    margin: 2rem;
+    display: grid;
+    grid-template-columns: 60vw 31vw;
+}
+.content-tittle{
+    color: rgb(46, 46, 46);
+    font-size: 30px;
+    font-weight: 900;
+    margin-top: 1rem;
+}
+.content-sub-tittle{
+    width: 55vw;
+    font-size: 18px;
+    margin-top: 1rem;
+}
+.content-tittle2{
+    color: rgb(46, 46, 46);
+    font-size: 30px;
+    font-weight: 900;
+}
+.content-sub-tittle2{
+    width: 27vw;
+    font-size: 18px;
+}
+.special-img{
+    display: flex;
+}
+.special-img img{
+    zoom: 0.15;
+    text-align: left;
+}
+.special-img div{
+    margin-top: 2.5rem;
+}
+.content-sub-tittle3{
+    display: flex;
+}
+.content-sub-tittle3 img{
+    width: 7vw;
+    height: 13vh;
+    border-radius: 50%;
+    margin-top: 1rem;
+}
+.name{
+    font-size: 20px;
+    color: rgb(75, 75, 75);
+    margin: 1rem 2rem;
+}
+.name span{
+    color: #9900aa;
+}
+
+
+
+@media only screen and (max-width: 1000px) {
+    .topmaindiv-img{
+        display: none;
+    }
+    .top-main-div{
+        width: 98.5vw;
+        border-bottom-right-radius: 0px !important;
+    }
+}
