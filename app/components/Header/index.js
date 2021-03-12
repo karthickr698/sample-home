@@ -288,11 +288,13 @@ function Header() {
         <>
           <div className="mob-nav">
             <div>
-              <img
-                src="https://readmycourse.com/Images/site-logo-v2.png"
-                alt="logo"
-                width="100%"
-              />
+              <a href="/">
+                <img
+                  src="https://readmycourse.com/Images/site-logo-v2.png"
+                  alt="logo"
+                  width="100%"
+                />
+              </a>
             </div>
             <div className="search-cont">
               <div className="search" style={{ border: '1px solid grey' }}>
@@ -319,11 +321,13 @@ function Header() {
       ) : (
         <Grid container spacing={0} className={classes.grid}>
           <Grid item xs={2} style={{ paddingLeft: '1rem' }}>
-            <img
+            <a href="/">
+              <img
               src="https://readmycourse.com/Images/site-logo-v2-full.png"
               alt="logo"
               width="100%"
-            />
+              />
+            </a>
           </Grid>
           <Grid item xs={2}>
             <ButtonToolbar>
