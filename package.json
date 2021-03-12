@@ -84,6 +84,7 @@
     "react-redux": "7.0.2",
     "react-responsive-multi-level-menu": "^2.2.5",
     "react-router-dom": "5.0.0",
+    "react-step-progress": "^1.0.3",
     "redux": "4.0.1",
     "redux-saga": "1.0.2",
     "reselect": "4.0.0",

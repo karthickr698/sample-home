@@ -29,7 +29,7 @@ import TableContainer from '@material-ui/core/TableContainer';
 import TableRow from '@material-ui/core/TableRow';
 import KeyboardArrowDownIcon from '@material-ui/icons/KeyboardArrowDown';
 import KeyboardArrowUpIcon from '@material-ui/icons/KeyboardArrowUp';
-
+import { Steps } from 'rsuite';
 
 import { useInjectSaga } from 'utils/injectSaga';
 import { useInjectReducer } from 'utils/injectReducer';
@@ -44,7 +44,6 @@ import individual07 from '../images/Icon individual-07.jpg';
 import individual08 from '../images/Icon individual-08.jpg';
 import individual09 from '../images/Icon individual-09.jpg';
 import about from '../images/About the course BG-06.jpg';
-
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -71,13 +70,6 @@ TabPanel.propTypes = {
   index: PropTypes.any.isRequired,
   value: PropTypes.any.isRequired,
 };
-
-function a11yProps(index) {
-  return {
-    id: `scrollable-auto-tab-${index}`,
-    'aria-controls': `scrollable-auto-tabpanel-${index}`,
-  };
-}
 
 const useRowStyles = makeStyles({
   root: {
@@ -106,10 +98,7 @@ const useStyles = makeStyles((theme) => ({
 function createData(name) {
   return {
     name,
-    history: [
-      { date: '2020-01-05', content: '11091700', amount: 3 },
-      { },
-    ],
+    history: [{ date: '2020-01-05', content: '11091700', amount: 3 }, {}],
   };
 }
 
@@ -120,9 +109,13 @@ function Row(props) {
 
   return (
     <React.Fragment>
-      <TableRow className={classes.root}>
-        <TableCell>
-          <IconButton aria-label="expand row" size="small" onClick={() => setOpen(!open)}>
+      <TableRow
+        className={classes.root}
+        onClick={() => setOpen(!open)}
+        style={{ cursor: 'pointer' }}
+      >
+        <TableCell style={{ width: '1rem' }}>
+          <IconButton aria-label="expand row" size="small">
             {open ? <KeyboardArrowUpIcon /> : <KeyboardArrowDownIcon />}
           </IconButton>
         </TableCell>
@@ -131,22 +124,22 @@ function Row(props) {
         </TableCell>
       </TableRow>
       <TableRow>
-        <TableCell style={{ paddingBottom: 0, paddingTop: 0 }} colSpan={6}>
+        <TableCell
+          style={{
+            paddingBottom: 0,
+            paddingTop: 0,
+            width: '70vw',
+            borderRadius: '1rem',
+          }}
+          colSpan={6}
+        >
           <Collapse in={open} timeout="auto" unmountOnExit>
-            <Box style={{border:'1px solid black'}} margin={1}>
-              <Typography variant="h6" gutterBottom component="div">
-                History
-              </Typography>
-              <Table size="small" aria-label="purchases">
-                <TableBody>
-                  {row.history.map((historyRow) => (
-                    
-                      <TableCell>{historyRow.content}</TableCell>
-                    
-                  ))}
-                </TableBody>
-              </Table>
-            </Box>
+            <Steps current={0} vertical style={{ padding: '0 5%' }}>
+              <Steps.Item title="Finished" />
+              <Steps.Item title="Finished" />
+              <Steps.Item title="Finished" />
+              <Steps.Item title="Finished" />
+            </Steps>
           </Collapse>
         </TableCell>
       </TableRow>
@@ -186,221 +179,278 @@ export function CourseDetails() {
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
-  }
+  };
   const [starValue, setStarValue] = React.useState(5);
-    return (
+  return (
+    <div>
+      <Helmet>
+        <title>CourseDetails</title>
+        <meta name="description" content="Description of CourseDetails" />
+      </Helmet>
       <div>
-        <Helmet>
-          <title>CourseDetails</title>
-          <meta name="description" content="Description of CourseDetails" />
-        </Helmet>
+        <Header />
         <div>
-          <Header />
-          <div>
-            <img className='topmaindiv-img' src="https://readmycourse.com/Images/maeg-cer.jpeg" />
-            <div className='top-main-div'>
-              <div className='page-content'>
-                Home / Join Live Class
-              </div>
-              <div className='live-content'>
-                Join Live Class
-              </div>
-              <div className='tittle'>
-                PYTHON for  BioInformatics
-              </div>
-              <div class="star-Rating">
-                <Rating
-                  name="read-only"
-                  value={starValue}
-                  readOnly
-                  precision={0.5}
-                />
-                <div>(5.0)</div>
-              </div>
-              <div className='fees-content'>
-                Full course fees ₹ 1000
-              </div>
-              <div className="rigister-content">
-                Sorry! you can't join this course. Registration has been closed for this course
-              </div>
+          <div className="top-main-div">
+            <div className="page-content">Home / Join Live Class</div>
+            <div className="live-content">Join Live Class</div>
+            <div className="tittle">PYTHON for BioInformatics</div>
+            <div class="star-Rating">
+              <Rating
+                name="read-only"
+                value={starValue}
+                readOnly
+                precision={0.5}
+              />
+              <div>(5.0)</div>
             </div>
-            <div>
-                <img style={{position:'absolute',height:'80vh',width:'98.8vw'}} src={about} alt="about" />
-              <div className='grid-table-content'>
-                <div style={{position:'relative'}}>
-                  <div class="content-tittle">About course</div>
+            <div className="fees-content">Full course fees ₹ 1000</div>
+            <div className="rigister-content">
+              Sorry! you can't join this course. Registration has been closed
+              for this course
+            </div>
+          </div>
+          <div>
+            <img src={about} class="curve-top-back" alt="about" />
+            <div className="grid-over-all">
+              <Grid container spacing={0}>
+                <Grid item xs={12} sm={8}>
+                  <div style={{ position: 'relative' }}>
+                    <div class="content-tittle">About course</div>
                     <div class="content-sub-tittle">
-                      This course teaches computer programming to those with little to no previous experience. Here you will learn Matrices and Operators, Function, programmer's Toolbox, loops, Data Type, and plotting
+                      This course teaches computer programming to those with
+                      little to no previous experience. Here you will learn
+                      Matrices and Operators, Function, programmer's Toolbox,
+                      loops, Data Type, and plotting
                     </div>
                     <div class="content-tittle">About Instructor</div>
                     <div class="content-sub-tittle3">
                       <img src="https://cdn.pixabay.com/photo/2014/09/14/18/04/dandelion-445228__340.jpg" />
                       <div className="name-main-div">
-                        <div className='name'>
+                        <div className="name">
                           Anjali Sikka <span>(4.5/5)</span>
                         </div>
                         <div class="name-under">
-                            Python master, Readmycourse
+                          Python master, Readmycourse
                         </div>
-                        <div className='class-tittle'>
+                        <div className="class-tittle">
                           <span style={{ color: '#9900aa' }}>
                             specialisation-
-                          </span> Python, pythonfor BioInformatics
+                          </span>{' '}
+                          Python, pythonfor BioInformatics
                         </div>
                       </div>
                     </div>
                   </div>
-                  <div style={{position:'relative'}}>
+                </Grid>
+                <Grid item xs={12} sm={3}>
+                  <div style={{ position: 'relative' }}>
                     <div class="content-tittle2">Special features</div>
-                      <div class="content-sub-tittle2">
-                        <div className="special-img">
-                          <img src={individual06} alt="individual06" />
-                          <div>
-                            certificate of completion
-                          </div>
-                        </div>
-                        <div className="special-img">
-                          <img src={individual07} alt="individual07" />
-                          <div>
-                            Job opportunities
-                          </div>
-                        </div>
-                        <div className="special-img">
-                          <img src={individual08} alt="individual08" />
-                          <div>
-                            message instructor at any time
-                          </div>
-                        </div>
-                        <div className="special-img">
-                          <img src={individual09} alt="individual09" />
-                          <div>
-                            Life time study material access
-                          </div>
-                        </div>
+                    <div class="content-sub-tittle2">
+                      <div className="special-img">
+                        <img src={individual06} alt="individual06" />
+                        <div>certificate of completion</div>
+                      </div>
+                      <div className="special-img">
+                        <img src={individual07} alt="individual07" />
+                        <div>Job opportunities</div>
+                      </div>
+                      <div className="special-img">
+                        <img src={individual08} alt="individual08" />
+                        <div>message instructor at any time</div>
+                      </div>
+                      <div className="special-img">
+                        <img src={individual09} alt="individual09" />
+                        <div>Life time study material access</div>
                       </div>
                     </div>
                   </div>
+                </Grid>
+              </Grid>
+            </div>
+          </div>
+          <div>
+            <div className="Sample-videos-tittle0">Sample videos</div>
+            <div className="tab-videos">
+              <div className="video-logoscroll">
+                <div className={classes.root}>
+                  <Tabs
+                    value={value}
+                    onChange={handleChange}
+                    indicatorColor="primary"
+                    textColor="primary"
+                    variant="scrollable"
+                    scrollButtons="auto"
+                    aria-label="scrollable auto tabs example"
+                  >
+                    <div className="video-tabs">
+                      <div className="videos-card">
+                        <img src="https://readmycourse.com/Images/iit-indore-logo.png" />
+                      </div>
+                      <div className="videos-card">
+                        <img src="https://readmycourse.com/Images/iit-indore-logo.png" />
+                      </div>
+                      <div className="videos-card">
+                        <img src="https://readmycourse.com/Images/iit-indore-logo.png" />
+                      </div>
+                      <div className="videos-card">
+                        <img src="https://readmycourse.com/Images/iit-indore-logo.png" />
+                      </div>
+                      <div className="videos-card">
+                        <img src="https://readmycourse.com/Images/iit-indore-logo.png" />
+                      </div>
+                      <div className="videos-card">
+                        <img src="https://readmycourse.com/Images/iit-indore-logo.png" />
+                      </div>
+                    </div>
+                  </Tabs>
                 </div>
-                <div>
-                  <div className='Sample-videos-tittle'>
-                    Sample videos
-                  </div>
-                  <div className='tab-videos'>
-                    <div className="video-logoscroll">
-                      <div className={classes.root}>
-                        <Tabs
-                          value={value}
-                          onChange={handleChange}
-                          indicatorColor="primary"
-                          textColor="primary"
-                          variant="scrollable"
-                          scrollButtons="auto"
-                          aria-label="scrollable auto tabs example"
-                        >
-                          <div className="video-tabs">
-                            <div className='videos-card'>
-                              <img src="https://readmycourse.com/Images/iit-indore-logo.png" />
-                            </div>
-                            <div className='videos-card'>
-                              <img src="https://readmycourse.com/Images/iit-indore-logo.png" />
-                            </div>
-                            <div className='videos-card'>
-                              <img src="https://readmycourse.com/Images/iit-indore-logo.png" />
-                            </div>
-                            <div className='videos-card'>
-                              <img src="https://readmycourse.com/Images/iit-indore-logo.png" />
-                            </div>
-                            <div className='videos-card'>
-                              <img src="https://readmycourse.com/Images/iit-indore-logo.png" />
-                            </div>
-                            <div className='videos-card'>
-                              <img src="https://readmycourse.com/Images/iit-indore-logo.png" />
-                            </div>
+              </div>
+            </div>
+            <div>
+              <div className="tittle-content">
+                Our latest <span style={{ color: '#b83b5e' }}>Syllabus</span>
+              </div>
+              <div className="weeks-table">
+                <div className="week-bar">
+                  <TableContainer component={Paper}>
+                    <Table aria-label="collapsible table">
+                      <TableBody style={{ width: '100%' }}>
+                        {rows.map((row) => (
+                          <div className="sample">
+                            <Row key={row.name} row={row} />
                           </div>
-                        </Tabs>
+                        ))}
+                      </TableBody>
+                    </Table>
+                  </TableContainer>
+                </div>
+              </div>
+              <div>
+                <div class="profile-tab">
+                  <Tabs
+                    value={value}
+                    onChange={handleChange}
+                    variant="scrollable"
+                    scrollButtons="on"
+                    indicatorColor="primary"
+                    textColor="primary"
+                    aria-label="scrollable force tabs example"
+                  >
+                    <div className="profile-tab-cards">
+                      <div class="content-sub-tittle4">
+                        <img src="https://cdn.pixabay.com/photo/2014/09/14/18/04/dandelion-445228__340.jpg" />
+                        <div className="name-main-div">
+                          <div className="name">
+                            Anjali Sikka <span>(4.5/5)</span>
+                          </div>
+                          <div class="name-under">
+                            Python master, Readmycourse
+                          </div>
+                          <div className="class-tittle4">
+                            <span style={{ color: '#9900aa' }}>
+                              specialisation-
+                            </span>{' '}
+                            Python, pythonfor BioInformatics
+                          </div>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                  <div>
-                    <div className='tittle-content'>
-                      Our latest <span style={{color:'#b83b5e'}}>Syllabus</span>
-                    </div>
-                    <div className='weeks-table'>
-                      <div className='week-bar'>
-                        <TableContainer component={Paper}>
-                          <Table aria-label="collapsible table">
-                            <TableBody style={{border:'1px solid black'}}>
-                              {rows.map((row) => (
-                                <Row key={row.name} row={row} />
-                              ))}
-                            </TableBody>
-                          </Table>
-                        </TableContainer>
-                      </div>
-                    </div>
-                    <div>
-                      <div className='Sample-videos-tittle2'>
-                    Student reviews
-                      </div>
-                  <div>
-                    <div className='rating-div'>
-                      <Grid container spacing={0}>
-                        <Grid item xs={12} sm={5}>
-                          <Grid container spacing={0}>
-                            <Grid item xs={12} sm={6}>
-                              <div class="star-Rating2">
-                                <div  className='point-reviews'>
-                                  4.8
+                  </Tabs>
+                </div>
+              </div>
+              <div>
+                <div className="Sample-videos-tittle2">Student reviews</div>
+                <div>
+                  <div className="rating-div">
+                    <Grid container spacing={0}>
+                      <Grid item xs={12} sm={5}>
+                        <Grid container spacing={0}>
+                          <Grid item xs={12} sm={4}>
+                            <div class="star-Rating2">
+                              <div className="point-reviews">4.8</div>
+                              <Rating
+                                name="read-only"
+                                value={starValue}
+                                readOnly
+                                precision={0.5}
+                              />
+                              <div className="reviews">(1121)Reviews</div>
+                            </div>
+                          </Grid>
+                          <Grid item xs={12} sm={8}>
+                            <div class="row">
+                              <div className="rating-bar">
+                                <div className="rating-bar-num">5</div>
+                                <div class="bar-container">
+                                  <div class="bar-5"></div>
                                 </div>
-                                <Rating
-                                  name="read-only"
-                                  value={starValue}
-                                  readOnly
-                                  precision={0.5}
-                                />
-                                <div className='reviews'>(1121)Reviews</div>
                               </div>
-                            </Grid>
-                            <Grid item xs={12} sm={6}>                              
-                              <div class="row">
+                              <div className="rating-bar">
+                                <div className="rating-bar-num">4</div>
+                                <div class="bar-container">
+                                  <div class="bar-4"></div>
+                                </div>
                               </div>
-                            </Grid>
+                              <div className="rating-bar">
+                                <div className="rating-bar-num">3</div>
+                                <div class="bar-container">
+                                  <div class="bar-3"></div>
+                                </div>
+                              </div>
+                              <div className="rating-bar">
+                                <div className="rating-bar-num">2</div>
+                                <div class="bar-container">
+                                  <div class="bar-2"></div>
+                                </div>
+                              </div>
+                              <div className="rating-bar">
+                                <div className="rating-bar-num">1</div>
+                                <div class="bar-container">
+                                  <div class="bar-1"></div>
+                                </div>
+                              </div>
+                            </div>
                           </Grid>
                         </Grid>
-                        <Grid item xs={12} sm={6}>
-                          <div className='rating-message'>
-                            <div className='first-div'>
-                              <img src="https://images.ctfassets.net/hrltx12pl8hq/5KiKmVEsCQPMNrbOE6w0Ot/341c573752bf35cb969e21fcd279d3f9/hero-img_copy.jpg?fit=fill&w=800&h=300" />
-                              <div className='rating-message-name'>
-                                Alex Phillips
-                              </div>
+                      </Grid>
+                      <Grid item xs={12} sm={6}>
+                        <div className="rating-message">
+                          <div className="first-div">
+                            <img src="https://images.ctfassets.net/hrltx12pl8hq/5KiKmVEsCQPMNrbOE6w0Ot/341c573752bf35cb969e21fcd279d3f9/hero-img_copy.jpg?fit=fill&w=800&h=300" />
+                            <div className="rating-message-name">
+                              Alex Phillips
                             </div>
-                              <div className='first-div2'>
-                                <Rating
-                                  name="read-only"
-                                  value={starValue}
-                                  readOnly
-                                  precision={0.5}
-                                />
-                                <div className='reviews-post-date'>11/03/2021</div>
-                            </div>
-                            <div className='reviews-feedback'>
-                              This course teaches computer programming to those with little to no previous experience. Here you will learn Matrices and Operators, Function, programmer's Toolbox, loops, Data Type, and plotting
-                            </div>
-                            <hr style={{ border:' 1px solid #0000000'}} />
                           </div>
-                        </Grid>  
-                      </Grid>    
-                    </div>
+                          <div className="first-div2">
+                            <Rating
+                              name="read-only"
+                              value={starValue}
+                              readOnly
+                              precision={0.5}
+                            />
+                            <div className="reviews-post-date">11/03/2021</div>
+                          </div>
+                          <div className="reviews-feedback">
+                            This course teaches computer programming to those
+                            with little to no previous experience. Here you will
+                            learn Matrices and Operators, Function, programmer's
+                            Toolbox, loops, Data Type, and plotting
+                          </div>
+                          <hr style={{ border: ' 1px solid #0000000' }} />
+                        </div>
+                      </Grid>
+                    </Grid>
                   </div>
+                  <Footer />
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    );
-  }
+    </div>
+  );
+}
 
 CourseDetails.propTypes = {
   dispatch: PropTypes.func.isRequired,
