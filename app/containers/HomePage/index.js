@@ -141,7 +141,7 @@ export function HomePage() {
             <img className="curve-mid" src={midel} alt="middle" />
             <div className="texttittle1">benefites of learning live</div>
             <div className="textopacityalign">
-              Do you want to knowwhy millions of students want learn live?
+              Do you want to know why millions of students want learn live?
             </div>
             <div className="icons">
               <Grid container spacing={1}>
