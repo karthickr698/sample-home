@@ -38,7 +38,7 @@ const data = [
 
 function CourseCard() {
   return (
-    <div>
+    <div className="course-card-main">
       <Grid container spacing={1}>
         {data &&
           data.map((ele) => (
@@ -59,7 +59,7 @@ function CourseCard() {
                 <div class="number-of-joined">117+ students joined</div>
                 <div class="card-buttom">
                   <Button>Join Free</Button>
-                  <div>
+                  <div class="more-details">
                     <Button>More details</Button>
                   </div>
                 </div>

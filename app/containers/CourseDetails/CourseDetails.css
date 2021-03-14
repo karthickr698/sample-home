@@ -166,11 +166,11 @@ body {
   display: flex;
 }
 .special-img img {
-  zoom: 0.15;
+  zoom: 0.2;
   text-align: left;
 }
 .special-img div {
-  margin-top: 2.5rem;
+  margin-top: 2rem;
 }
 .content-sub-tittle3 {
   display: flex;

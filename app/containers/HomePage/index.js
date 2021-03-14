@@ -28,13 +28,108 @@ import Header from '../../components/Header/Loadable';
 import Footer from '../../components/Footer/Loadable';
 import CourseCard from '../../components/CourseCard/Loadable';
 
-import topImage from '../images/Cover-image.jpg';
+import topImage from '../images/Coverimage-1.png';
 import midel from '../images/mid-curve.jpg';
-import bottom from '../images/Readmycourse thankyou graphic-06.jpg';
-import individual06 from '../images/Icon individual-06.jpg';
-import individual07 from '../images/Icon individual-07.jpg';
-import individual08 from '../images/Icon individual-08.jpg';
-import individual09 from '../images/Icon individual-09.jpg';
+import bottom from '../images/Thanks.png';
+import individual06 from '../images/Features-2.png';
+import individual07 from '../images/Features-4.png';
+import individual08 from '../images/Features-6.png';
+import individual09 from '../images/Features-8.png';
+import institute from '../images/Icons-1.png';
+import institute1 from '../images/Icons-2.png';
+import institute2 from '../images/Icons-3.png';
+import institute3 from '../images/Icons-4.png';
+import benefit from '../images/Benefits-1.png';
+import benefit1 from '../images/Benefits-2.png';
+import benefit2 from '../images/Benefits-3.png';
+
+const benefits = [
+  {
+    title: 'customized learning',
+    text: 'Learn what you exactly need, to boost your interest.',
+    imgLink: benefit,
+  },
+  {
+    title: 'customized learning',
+    text: 'Learn what you exactly need, to boost your interest.',
+    imgLink: benefit1,
+  },
+  {
+    title: 'customized learning',
+    text: 'Learn what you exactly need, to boost your interest.',
+    imgLink: benefit2,
+  },
+];
+
+const features = [
+  {
+    text: 'Certificate of completion',
+    imgLink: individual06,
+  },
+  {
+    text: 'Life time study material access',
+    imgLink: individual07,
+  },
+  {
+    text: 'Message instructor at any time',
+    imgLink: individual08,
+  },
+  {
+    text: 'Job opportunities',
+    imgLink: individual09,
+  },
+];
+
+const institutes = [
+  {
+    id: 1,
+    imgLink: institute,
+  },
+  {
+    id: 2,
+    imgLink: institute1,
+  },
+  {
+    id: 3,
+    imgLink: institute2,
+  },
+  {
+    id: 4,
+    imgLink: institute3,
+  },
+  {
+    id: 1,
+    imgLink: institute,
+  },
+  {
+    id: 2,
+    imgLink: institute1,
+  },
+  {
+    id: 3,
+    imgLink: institute2,
+  },
+  {
+    id: 4,
+    imgLink: institute3,
+  },
+  {
+    id: 1,
+    imgLink: institute,
+  },
+  {
+    id: 2,
+    imgLink: institute1,
+  },
+  {
+    id: 3,
+    imgLink: institute2,
+  },
+  {
+    id: 4,
+    imgLink: institute3,
+  },
+];
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -125,13 +220,10 @@ export function HomePage() {
               aria-label="scrollable auto tabs example"
             >
               <div className="logos">
-                <img src="https://readmycourse.com/Images/iit-indore-logo.png" />
-                <img src="https://readmycourse.com/Images/iit_mandi_logo.png" />
-                <img src="https://readmycourse.com/Images/mnnit-allahabad-logo.png" />
-                <img src="https://readmycourse.com//Images/institutions_logo/IIT_Kharagpur_Logo.svg" />
-                <img src="https://readmycourse.com/Images/institutions_logo/mit-logo.png" />
-                <img src="https://readmycourse.com/Images/institutions_logo/stanford.png" />
-                <img src="https://readmycourse.com/Images/institutions_logo/iiser-pune-logo.png" />
+                {institutes &&
+                  institutes.map((ele) => (
+                    <img src={ele.imgLink} alt="insti" />
+                  ))}
               </div>
             </Tabs>
           </div>
@@ -139,58 +231,44 @@ export function HomePage() {
         <div className="curve-overall">
           <div className="curvetop">
             <img className="curve-mid" src={midel} alt="middle" />
-            <div className="texttittle1">benefites of learning live</div>
+            <div className="texttittle1">Benefites of learning live</div>
             <div className="textopacityalign">
               Do you want to know why millions of students want learn live?
             </div>
             <div className="icons">
               <Grid container spacing={1}>
-                <Grid item xs={12} sm={4}>
-                  <div>
-                    <img src="https://readmycourse.com/Images/icon/web_icons/bulb.png" />
-                    <div className="textalign">
-                      <div>customized learning</div>
-                      Learn what you exactly need, to boost your interest.
-                    </div>
-                  </div>
-                </Grid>
-                <Grid item xs={12} sm={4}>
-                  <div>
-                    <img src="https://readmycourse.com/Images/icon/web_icons/chat.png" />
-                    <div className="textalign">
-                      <div>customized learning</div>
-                      Learn what you exactly need, to boost your interest.
-                    </div>
-                  </div>
-                </Grid>
-                <Grid item xs={12} sm={4}>
-                  <div>
-                    <img src="https://readmycourse.com/Images/icon/web_icons/book.png" />
-                    <div className="textalign">
-                      <div>customized learning</div>
-                      Learn what you exactly need, to boost your interest.
-                    </div>
-                  </div>
-                </Grid>
+                {benefits &&
+                  benefits.map((ele) => (
+                    <Grid item xs={12} sm={4}>
+                      <div className="benefit">
+                        <img src={ele.imgLink} alt="bene" />
+                        <div className="textalign">
+                          <div>{ele.title}</div>
+                          {ele.text}
+                        </div>
+                      </div>
+                    </Grid>
+                  ))}
               </Grid>
             </div>
             <div className="texttittle1">
               Features available in our live classes
             </div>
             <div className="livetittle">"who knows, dose it live"</div>
-            <div class="circleflex">
-              <div className="circle">
-                <img src={individual06} alt="individual06" />
-              </div>
-              <div className="circle">
-                <img src={individual07} alt="individual07" />
-              </div>
-              <div className="circle">
-                <img src={individual08} alt="individual08" />
-              </div>
-              <div className="circle">
-                <img src={individual09} alt="individual09" />
-              </div>
+            <div className="icons features">
+              <Grid container spacing={1}>
+                {features &&
+                  features.map((ele) => (
+                    <Grid item xs={12} sm={3}>
+                      <div className="circle">
+                        <img src={ele.imgLink} alt="bene" />
+                      </div>
+                      <div className="textalign" style={{ marginTop: '1rem' }}>
+                        {ele.text}
+                      </div>
+                    </Grid>
+                  ))}
+              </Grid>
             </div>
             <div class="text-help">
               We help you to get job in <span>top companies</span>
@@ -211,13 +289,10 @@ export function HomePage() {
                   aria-label="scrollable auto tabs example"
                 >
                   <div className="logos2">
-                    <img src="https://readmycourse.com/Images/iit-indore-logo.png" />
-                    <img src="https://readmycourse.com/Images/iit_mandi_logo.png" />
-                    <img src="https://readmycourse.com/Images/mnnit-allahabad-logo.png" />
-                    <img src="https://readmycourse.com//Images/institutions_logo/IIT_Kharagpur_Logo.svg" />
-                    <img src="https://readmycourse.com/Images/institutions_logo/mit-logo.png" />
-                    <img src="https://readmycourse.com/Images/institutions_logo/stanford.png" />
-                    <img src="https://readmycourse.com/Images/institutions_logo/iiser-pune-logo.png" />
+                    {institutes &&
+                      institutes.map((ele) => (
+                        <img src={ele.imgLink} alt="insti" />
+                      ))}
                   </div>
                 </Tabs>
               </div>
@@ -242,6 +317,9 @@ export function HomePage() {
                     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcStN_DfwUJ7o3S32kOPA111HHQsZFgzTlJrFw&usqp=CAU" />
                   </div>
                   <div className="message">
+                    <div class="msg-mob">
+                      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcStN_DfwUJ7o3S32kOPA111HHQsZFgzTlJrFw&usqp=CAU" />
+                    </div>
                     <div className="massegebox">
                       <span>
                         Technical courses of ReadMyCourse can really satisfy to
@@ -251,11 +329,17 @@ export function HomePage() {
                         information processing.{' '}
                       </span>
                     </div>
-                    <div class="colorname">Anna Bashir Nakhoon</div>
+                    <div class="colorname">Kar</div>
                   </div>
                 </div>
                 <div className="chart-sub-cont">
-                  <div className="message massegebox1">
+                  <div
+                    className="message massegebox1"
+                    style={{ marginLeft: '0' }}
+                  >
+                    <div class="msg-mob">
+                      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcStN_DfwUJ7o3S32kOPA111HHQsZFgzTlJrFw&usqp=CAU" />
+                    </div>
                     <div className="massegebox">
                       <span>
                         Technical courses of ReadMyCourse can really satisfy to
@@ -265,7 +349,7 @@ export function HomePage() {
                         information processing.{' '}
                       </span>
                     </div>
-                    <div class="colorname">Anna Bashir Nakhoon</div>
+                    <div class="colorname">Kar 1</div>
                   </div>
                   <div class="chatcard">
                     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcStN_DfwUJ7o3S32kOPA111HHQsZFgzTlJrFw&usqp=CAU" />
@@ -278,6 +362,9 @@ export function HomePage() {
                     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcStN_DfwUJ7o3S32kOPA111HHQsZFgzTlJrFw&usqp=CAU" />
                   </div>
                   <div className="message">
+                    <div class="msg-mob">
+                      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcStN_DfwUJ7o3S32kOPA111HHQsZFgzTlJrFw&usqp=CAU" />
+                    </div>
                     <div className="massegebox">
                       <span>
                         Technical courses of ReadMyCourse can really satisfy to
@@ -287,11 +374,17 @@ export function HomePage() {
                         information processing.{' '}
                       </span>
                     </div>
-                    <div class="colorname">Anna Bashir Nakhoon</div>
+                    <div class="colorname">Kar 2</div>
                   </div>
                 </div>
-                <div className="chart-sub-cont chart-sub-cont2">
+                <div
+                  className="chart-sub-cont chart-sub-cont1"
+                  style={{ marginLeft: '0' }}
+                >
                   <div className="message massegebox1">
+                    <div class="msg-mob">
+                      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcStN_DfwUJ7o3S32kOPA111HHQsZFgzTlJrFw&usqp=CAU" />
+                    </div>
                     <div className="massegebox">
                       <span>
                         Technical courses of ReadMyCourse can really satisfy to
@@ -301,7 +394,7 @@ export function HomePage() {
                         information processing.{' '}
                       </span>
                     </div>
-                    <div class="colorname">Anna Bashir Nakhoon</div>
+                    <div class="colorname">Kar 3</div>
                   </div>
                   <div class="chatcard">
                     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcStN_DfwUJ7o3S32kOPA111HHQsZFgzTlJrFw&usqp=CAU" />
@@ -318,7 +411,7 @@ export function HomePage() {
               </div>
             </div>
             <div className="thankstittle">Thankyou for visiting us</div>
-            <div style={{ height: '50px' }}>
+            <div style={{ height: '20vh' }}>
               <div>
                 <img className="bottomimg" src={bottom} alt="bottom" />
               </div>

@@ -39,10 +39,10 @@ import saga from './saga';
 import Header from '../../components/Header/Loadable';
 import Footer from '../../components/Footer/Loadable';
 import './CourseDetails.css';
-import individual06 from '../images/Icon individual-06.jpg';
-import individual07 from '../images/Icon individual-07.jpg';
-import individual08 from '../images/Icon individual-08.jpg';
-import individual09 from '../images/Icon individual-09.jpg';
+import individual06 from '../images/Features-5.svg';
+import individual07 from '../images/Features-6.png';
+import individual08 from '../images/Features-7.svg';
+import individual09 from '../images/Features-8.png';
 import about from '../images/About the course BG-06.jpg';
 
 function TabPanel(props) {

@@ -238,48 +238,66 @@ function Header() {
   const classes = useStyles();
   const menuItems = [
     {
-      value: 'Fashion',
+      value: 'All Course',
       items: [
         {
-          value: 'Men',
+          value: 'Fashion',
           items: [
             {
-              value: 'Shirts',
+              value: 'Men',
+              items: [
+                {
+                  value: 'Shirts',
+                },
+              ],
+            },
+            {
+              value: 'Women',
+              items: [
+                {
+                  value: 'Jackets',
+                },
+                {
+                  value: 'T-Shirts',
+                },
+                {
+                  value: 'Underwear',
+                },
+              ],
+            },
+            {
+              value: 'Children',
             },
           ],
         },
         {
-          value: 'Women',
-          items: [
-            {
-              value: 'Jackets',
-            },
-            {
-              value: 'T-Shirts',
-            },
-            {
-              value: 'Underwear',
-            },
-          ],
+          value: 'Electronics',
+          items: [],
         },
         {
-          value: 'Children',
+          value: 'Furnitures',
+          items: [],
+        },
+        {
+          value: 'Jewelery&watches',
+          items: [],
         },
       ],
     },
     {
-      value: 'Electronics',
-    },
-    {
-      value: 'Furnitures',
+      value: 'MAEG',
       items: [],
     },
     {
-      value: 'Jewelery&watches',
+      value: 'Login',
+      items: [],
+    },
+    {
+      value: 'Join Free',
       items: [],
     },
   ];
-  const color = '#c62860';
+  const color = '#b83b5e';
   const animation = ['slideIn', 'slideOut'];
 
   return (
@@ -323,9 +341,9 @@ function Header() {
           <Grid item xs={2} style={{ paddingLeft: '1rem' }}>
             <a href="/">
               <img
-              src="https://readmycourse.com/Images/site-logo-v2-full.png"
-              alt="logo"
-              width="100%"
+                src="https://readmycourse.com/Images/site-logo-v2-full.png"
+                alt="logo"
+                width="100%"
               />
             </a>
           </Grid>
@@ -359,9 +377,6 @@ function Header() {
             </Button>
           </Grid>
           <Grid item xs={3}>
-            <Button variant="outlined" color="secondary" className="join">
-              Join Free
-            </Button>
             <Button
               className="login"
               variant="outlined"
@@ -369,6 +384,9 @@ function Header() {
               color="primary"
             >
               Login
+            </Button>
+            <Button variant="outlined" className="join">
+              Join Free
             </Button>
           </Grid>
         </Grid>
