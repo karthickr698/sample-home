@@ -8,16 +8,13 @@ import React, { memo } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { Helmet } from 'react-helmet';
-import { FormattedMessage } from 'react-intl';
 import { createStructuredSelector } from 'reselect';
 import { compose } from 'redux';
 import { makeStyles } from '@material-ui/core/styles';
 import Rating from '@material-ui/lab/Rating';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
-import AppBar from '@material-ui/core/AppBar';
 import Tabs from '@material-ui/core/Tabs';
-import Tab from '@material-ui/core/Tab';
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
 import Collapse from '@material-ui/core/Collapse';
@@ -345,10 +342,22 @@ function Row(props) {
       >
         <TableCell style={{ width: '1rem' }}>
           <IconButton aria-label="expand row" size="small">
-            {open ? <KeyboardArrowUpIcon /> : <KeyboardArrowDownIcon />}
+            {open ? (
+              <KeyboardArrowUpIcon
+                style={{ color: ' #9900aa', fontSize: '2rem' }}
+              />
+            ) : (
+              <KeyboardArrowDownIcon
+                style={{ color: ' #9900aa', fontSize: '2rem' }}
+              />
+            )}
           </IconButton>
         </TableCell>
-        <TableCell component="th" scope="row">
+        <TableCell
+          component="th"
+          scope="row"
+          style={{ fontSize: '1.4rem', color: 'black' }}
+        >
           {row.name}
         </TableCell>
       </TableRow>
@@ -393,11 +402,11 @@ Row.propTypes = {
 };
 
 const rows = [
-  createData('Frozen yoghurt'),
-  createData('Ice cream sandwich'),
-  createData('Eclair'),
-  createData('Cupcake'),
-  createData('Gingerbread'),
+  createData('Week 1'),
+  createData('Week 2'),
+  createData('Week 3'),
+  createData('Week 4'),
+  createData('Week 5'),
 ];
 
 export function CourseDetails() {
@@ -590,7 +599,7 @@ export function CourseDetails() {
                     <Grid container spacing={0}>
                       <Grid item xs={12} sm={5}>
                         <Grid container spacing={0}>
-                          <Grid item xs={6} sm={4}>
+                          <Grid item xs={4} sm={4}>
                             <div class="star-Rating2">
                               <div className="point-reviews">4.8</div>
                               <Rating
@@ -602,12 +611,15 @@ export function CourseDetails() {
                               <div className="reviews">(1121)Reviews</div>
                             </div>
                           </Grid>
-                          <Grid item xs={6} sm={8}>
+                          <Grid item xs={8} sm={8}>
                             <div class="row">
                               <div className="rating-bar">
                                 <div className="rating-bar-num">5</div>
                                 <div class="bar-container">
                                   <div class="bar-5"></div>
+                                </div>
+                                <div className="rating-bar-num rating-bar-num1">
+                                  5
                                 </div>
                               </div>
                               <div className="rating-bar">
@@ -615,11 +627,17 @@ export function CourseDetails() {
                                 <div class="bar-container">
                                   <div class="bar-4"></div>
                                 </div>
+                                <div className="rating-bar-num rating-bar-num1">
+                                  5
+                                </div>
                               </div>
                               <div className="rating-bar">
                                 <div className="rating-bar-num">3</div>
                                 <div class="bar-container">
                                   <div class="bar-3"></div>
+                                </div>
+                                <div className="rating-bar-num rating-bar-num1">
+                                  5
                                 </div>
                               </div>
                               <div className="rating-bar">
@@ -627,11 +645,17 @@ export function CourseDetails() {
                                 <div class="bar-container">
                                   <div class="bar-2"></div>
                                 </div>
+                                <div className="rating-bar-num rating-bar-num1">
+                                  5
+                                </div>
                               </div>
                               <div className="rating-bar">
                                 <div className="rating-bar-num">1</div>
                                 <div class="bar-container">
                                   <div class="bar-1"></div>
+                                </div>
+                                <div className="rating-bar-num rating-bar-num1">
+                                  5
                                 </div>
                               </div>
                             </div>

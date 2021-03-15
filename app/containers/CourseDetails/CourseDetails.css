@@ -193,7 +193,7 @@ body {
 }
 .name-main-div {
   margin: 1rem;
-  margin-left: 0;
+  margin-left: 1rem;
 }
 .name span {
   color: #9900aa;
@@ -247,6 +247,10 @@ body {
 .profile-tab-cards {
   width: 30vw;
   background-color: white;
+}
+.content-sub-tittle4 {
+  display: flex;
+  width: 29vw;
 }
 .PrivateTabIndicator-colorPrimary-141 {
   background: none !important;
@@ -386,22 +390,22 @@ body {
   margin-right: 10px;
 }
 
-.content-sub-tittle4 {
-  display: flex;
+.rating-bar-num1 {
+  margin-right: 0;
+  margin-left: 10px;
 }
 .content-sub-tittle4 img {
-  width: 70px;
-  height: 70px;
+  width: 80px;
+  height: 80px;
   border-radius: 50%;
   margin-top: 1rem;
 }
 .class-tittle4 {
   margin: 0.1rem 2rem 0 1.5rem;
   font-size: 13px;
-  width: 20vw;
 }
 
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 600px) {
   .top-main-div {
     width: 100%;
     padding: 2rem;
@@ -488,6 +492,22 @@ body {
   }
   .content-sub-tittle4 {
     display: flex;
+    width: 70vw;
     flex-direction: column;
+  }
+  .content-sub-tittle4 img {
+    margin: auto;
+  }
+  .name-main-div {
+    text-align: center;
+  }
+  .star-Rating2 {
+    margin-left: 0rem;
+  }
+  .row {
+    padding: 0 0 0 15%;
+  }
+  .bar-container {
+    width: 75%;
   }
 }

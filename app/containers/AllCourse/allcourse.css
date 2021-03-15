@@ -1,0 +1,22 @@
+.carousel img {
+  width: 100vw;
+  height: 25rem;
+}
+
+.MuiSvgIcon-root {
+  font-weight: bold !important;
+}
+
+.Carousel-button-10 {
+  color: rgb(114, 113, 113) !important;
+  background-color: white !important;
+}
+
+.join-text-all-course {
+  font-size: 30px;
+  font-weight: 900;
+  color: #9900aa;
+  text-align: center;
+  margin-top: 4rem;
+  margin-bottom: 1rem;
+}
