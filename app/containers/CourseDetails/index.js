@@ -41,6 +41,8 @@ import individual07 from '../images/Features-4.png';
 import individual08 from '../images/Features-6.png';
 import individual09 from '../images/Features-8.png';
 import about from '../images/About the course BG-06.jpg';
+import book from '../images/book.jpg';
+import student from '../images/students.jpg';
 
 const reviews = [
   {
@@ -476,8 +478,14 @@ export function CourseDetails() {
                           </span>{' '}
                           Python, pythonfor BioInformatics
                         </div>
-                        <div className="name-under">1133 Students</div>
-                        <div className="name-under">10 Courses</div>
+                        <div className="name-under">
+                          <img src={student} alt="student" />
+                          1133 Students
+                        </div>
+                        <div className="name-under">
+                          <img src={book} alt="student" />
+                          10 Courses
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -580,9 +588,11 @@ export function CourseDetails() {
                                 {ele.skills}
                               </div>
                               <div className="name-under1">
+                                <img src={student} alt="student" />
                                 {ele.student} Students
                               </div>
                               <div className="name-under1">
+                                <img src={book} alt="student" />
                                 {ele.course} Courses
                               </div>
                             </div>
