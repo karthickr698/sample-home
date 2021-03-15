@@ -2,6 +2,9 @@ body {
   padding: 0 !important;
   margin: 0 !important;
 }
+.MuiTabs-scroller {
+  white-space: normal !important;
+}
 .rs-steps-item-status-process
   .rs-steps-item-icon-wrapper:not(.rs-steps-item-custom-icon) {
   background: crimson !important;
@@ -124,28 +127,28 @@ body {
   color: rgb(160, 160, 160);
   font-size: 18px;
 }
-.grid-over-all{
-    margin: 2rem;
+.grid-over-all {
+  margin: 2rem;
 }
-.sample{
-    width: 100%;
-    margin-bottom: 2rem;
-    min-height: 2rem;
-    border-radius: 10px;
-    background: none !important;
-    box-shadow: 1px 1px 20px rgb(224, 224, 224);
-    border: 1px solid rgba(0, 0, 0, 0.26) !important;
+.sample {
+  width: 100%;
+  margin-bottom: 2rem;
+  min-height: 2rem;
+  border-radius: 10px;
+  background: none !important;
+  box-shadow: 1px 1px 20px rgb(224, 224, 224);
+  border: 1px solid rgba(0, 0, 0, 0.26) !important;
 }
-.curve-top-back{
-    position: absolute;
-    height: 90vh;
-    width: 98.8vw; 
+.curve-top-back {
+  position: absolute;
+  height: 90vh;
+  width: 98.8vw;
 }
 .content-tittle {
   color: rgb(46, 46, 46);
   font-size: 30px;
   font-weight: 900;
-  margin-top: 1rem;
+  margin-top: 3rem;
 }
 .content-sub-tittle {
   width: 55vw;
@@ -157,6 +160,7 @@ body {
   color: rgb(46, 46, 46);
   font-size: 30px;
   font-weight: 900;
+  padding-left: 1.8rem;
 }
 .content-sub-tittle2 {
   width: 27vw;
@@ -174,29 +178,36 @@ body {
 }
 .content-sub-tittle3 {
   display: flex;
+  margin-top: 1rem;
 }
 .content-sub-tittle3 img {
-  width: 70px;
-  height: 70px;
+  width: 6rem;
+  height: 6rem;
   border-radius: 50%;
   margin-top: 1rem;
 }
 .name {
   font-size: 20px;
   color: rgb(75, 75, 75);
-  margin: 0rem 2rem;
+  margin: 0rem 1.5rem;
 }
 .name-main-div {
   margin: 1rem;
+  margin-left: 0;
 }
 .name span {
   color: #9900aa;
+  padding-left: 1rem;
 }
 .name-under {
-  margin: 0.5rem 2rem 0 2rem;
+  margin: 0.5rem 2rem 0 1.5rem;
+}
+.name-under1 {
+  margin: 0.1rem 2rem 0 1.5rem;
+  font-size: 13px;
 }
 .class-tittle {
-  margin: 0.5rem 2rem 0 2rem;
+  margin: 0.5rem 2rem 0 1.5rem;
 }
 .Sample-videos-tittle0 {
   text-align: center;
@@ -215,7 +226,7 @@ body {
   margin-bottom: 2rem;
 }
 .tab-videos {
-  width: 75vw;
+  width: 95vw;
   margin: auto;
   margin-bottom: 2rem;
 }
@@ -228,33 +239,40 @@ body {
   display: flex;
   border: none !important;
 }
-.profile-tab{
-    width: 70vw;
-    margin-top: 2rem !important;
-    margin: auto;
+.profile-tab {
+  width: 90vw;
+  margin-top: 2rem !important;
+  margin: auto;
 }
-.profile-tab-cards{
-    width: 30vw;
-    background-color: white;
+.profile-tab-cards {
+  width: 30vw;
+  background-color: white;
 }
 .PrivateTabIndicator-colorPrimary-141 {
   background: none !important;
 }
 .videos-card {
-  width: 20vw;
+  width: 21vw;
   height: 40vh;
-  margin-right: 2.2rem;
+  margin-right: 1.3rem;
   background-color: rgb(255, 255, 255);
   border: 1px solid rgb(136, 136, 136);
   border-radius: 10px;
   text-align: center;
 }
 .videos-card img {
-  width: 19vw;
+  width: 19.8vw;
   margin-top: 5px;
-  height: 20vh;
+  height: 27vh;
   border: 1px solid rgb(182, 182, 182);
   border-radius: 7px;
+}
+.video-name {
+  padding: 0 1%;
+  color: black;
+  font-size: 20px;
+  word-wrap: break-word;
+  padding-top: 1rem;
 }
 
 .Sample-videos-tittle2 {
@@ -293,7 +311,7 @@ body {
 }
 .reviews-post-date {
   margin-left: 1rem;
-  margin-top: 5px;
+  margin-top: 3px;
   color: rgb(146, 146, 146);
 }
 .reviews-feedback {
@@ -316,7 +334,7 @@ body {
   background-color: white;
 }
 .MuiPaper-elevation1 {
-    box-shadow: none !important;
+  box-shadow: none !important;
 }
 .row {
   padding: 0 10%;
@@ -378,7 +396,7 @@ body {
   margin-top: 1rem;
 }
 .class-tittle4 {
-  margin: 0.5rem 2rem 0 2rem;
+  margin: 0.1rem 2rem 0 1.5rem;
   font-size: 13px;
   width: 20vw;
 }
@@ -391,18 +409,18 @@ body {
   .MuiTabs-scrollButtonsDesktop {
     display: block !important;
   }
-  .special-img img{
-        zoom: none !important;
-        width: 28rem;
-        height: 28rem;
+  .special-img img {
+    zoom: none !important;
+    width: 28rem;
+    height: 28rem;
   }
-  .special-img{
-      width: 22rem;
+  .special-img {
+    width: 22rem;
   }
   .MuiGrid-container {
     width: 90% !important;
     margin-left: 2rem;
-}
+  }
 
   .MuiTabScrollButton-root {
     margin: auto !important;
@@ -410,52 +428,66 @@ body {
   .video-logoscroll {
     background: none;
     margin: auto;
-    width: 65vw !important;
+    width: 90vw !important;
     margin-top: 1rem;
     margin-bottom: 5rem;
   }
   .rating-message img {
     width: 16vw;
-}
-    .curve-top-back{
-        position: absolute;
-        margin: 0 !important;
-        height: 130vh;
-        width: 98.8vw; 
-    }
-.Sample-videos-tittle {
-  margin-top: 15rem;
-}
+  }
+  .curve-top-back {
+    position: absolute;
+    margin: 0 !important;
+    height: 165vh;
+    width: 98.8vw;
+  }
+  .Sample-videos-tittle {
+    margin-top: 15rem;
+  }
   .MuiSvgIcon-fontSizeSmall {
     font-size: 2.25rem !important;
     height: 286px;
   }
   .videos-card {
-    width: 40vw;
+    width: 70vw;
     margin-left: 0;
-    margin-right: 2rem;
+    margin-right: 1.5rem;
     text-align: center;
   }
   .videos-card img {
     width: 15vw;
     height: 20vh;
   }
-  .weeks-table{
+  .weeks-table {
     width: 90vw;
   }
-  .videos-card img{
-      width: 37vw;
+  .videos-card img {
+    width: 37vw;
   }
-    .grid-over-all{
-        margin: 0rem;
-    }
-    .content-sub-tittle{
-        width: 85vw;
-    }
-    .special-img div{
-        margin-top: 1.5rem;
-    }
-    .reviews-feedback{
-        width: 85vw;
-    }
+  .grid-over-all {
+    margin: 0rem;
+  }
+  .content-sub-tittle {
+    width: 85vw;
+  }
+  .special-img div {
+    margin-top: 1.5rem;
+  }
+  .reviews-feedback {
+    width: 85vw;
+  }
+  .content-tittle2 {
+    padding-left: 0rem;
+  }
+  .Sample-videos-tittle0 {
+    margin-top: 33vh;
+  }
+  .profile-tab-cards {
+    width: 90vw;
+    background-color: white;
+  }
+  .content-sub-tittle4 {
+    display: flex;
+    flex-direction: column;
+  }
 }

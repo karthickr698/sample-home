@@ -39,11 +39,240 @@ import saga from './saga';
 import Header from '../../components/Header/Loadable';
 import Footer from '../../components/Footer/Loadable';
 import './CourseDetails.css';
-import individual06 from '../images/Features-5.svg';
-import individual07 from '../images/Features-6.png';
-import individual08 from '../images/Features-7.svg';
+import individual06 from '../images/Features-2.png';
+import individual07 from '../images/Features-4.png';
+import individual08 from '../images/Features-6.png';
 import individual09 from '../images/Features-8.png';
 import about from '../images/About the course BG-06.jpg';
+
+const reviews = [
+  {
+    text:
+      'This course teaches computer programming to those with little to no previous experience. Here you will learn Matrices and Operators, Function, programmers Toolbox, loops, Data Type, and plotting',
+    date: '11/03/2021',
+    name: 'karthick',
+    rating: 2.5,
+  },
+  {
+    text:
+      'This course teaches computer programming to those with little to no previous experience. Here you will learn Matrices and Operators, Function, programmers Toolbox, loops, Data Type, and plotting',
+    date: '11/03/2021',
+    name: 'karthick',
+    rating: 2.5,
+  },
+  {
+    text:
+      'This course teaches computer programming to those with little to no previous experience. Here you will learn Matrices and Operators, Function, programmers Toolbox, loops, Data Type, and plotting',
+    date: '11/03/2021',
+    name: 'karthick',
+    rating: 2.5,
+  },
+  {
+    text:
+      'This course teaches computer programming to those with little to no previous experience. Here you will learn Matrices and Operators, Function, programmers Toolbox, loops, Data Type, and plotting',
+    date: '11/03/2021',
+    name: 'karthick',
+    rating: 2.5,
+  },
+  {
+    text:
+      'This course teaches computer programming to those with little to no previous experience. Here you will learn Matrices and Operators, Function, programmers Toolbox, loops, Data Type, and plotting',
+    date: '11/03/2021',
+    name: 'karthick',
+    rating: 2.5,
+  },
+  {
+    text:
+      'This course teaches computer programming to those with little to no previous experience. Here you will learn Matrices and Operators, Function, programmers Toolbox, loops, Data Type, and plotting',
+    date: '11/03/2021',
+    name: 'karthick',
+    rating: 2.5,
+  },
+  {
+    text:
+      'This course teaches computer programming to those with little to no previous experience. Here you will learn Matrices and Operators, Function, programmers Toolbox, loops, Data Type, and plotting',
+    date: '11/03/2021',
+    name: 'karthick',
+    rating: 2.5,
+  },
+  {
+    text:
+      'This course teaches computer programming to those with little to no previous experience. Here you will learn Matrices and Operators, Function, programmers Toolbox, loops, Data Type, and plotting',
+    date: '11/03/2021',
+    name: 'karthick',
+    rating: 2.5,
+  },
+  {
+    text:
+      'This course teaches computer programming to those with little to no previous experience. Here you will learn Matrices and Operators, Function, programmers Toolbox, loops, Data Type, and plotting',
+    date: '11/03/2021',
+    name: 'karthick',
+    rating: 2.5,
+  },
+  {
+    text:
+      'This course teaches computer programming to those with little to no previous experience. Here you will learn Matrices and Operators, Function, programmers Toolbox, loops, Data Type, and plotting',
+    date: '11/03/2021',
+    name: 'karthick',
+    rating: 2.5,
+  },
+];
+
+const videoDatas = [
+  {
+    text: 'Top Course On Machine Learning',
+    imgLink:
+      'https://cdn.pixabay.com/photo/2014/09/14/18/04/dandelion-445228__340.jpg',
+  },
+  {
+    text: 'Top Course On Machine Learning',
+    imgLink:
+      'https://cdn.pixabay.com/photo/2014/09/14/18/04/dandelion-445228__340.jpg',
+  },
+  {
+    text: 'Top Course On Machine Learning',
+    imgLink:
+      'https://cdn.pixabay.com/photo/2014/09/14/18/04/dandelion-445228__340.jpg',
+  },
+  {
+    text: 'Top Course On Machine Learning',
+    imgLink:
+      'https://cdn.pixabay.com/photo/2014/09/14/18/04/dandelion-445228__340.jpg',
+  },
+  {
+    text: 'Top Course On Machine Learning',
+    imgLink:
+      'https://cdn.pixabay.com/photo/2014/09/14/18/04/dandelion-445228__340.jpg',
+  },
+  {
+    text: 'Top Course On Machine Learning',
+    imgLink:
+      'https://cdn.pixabay.com/photo/2014/09/14/18/04/dandelion-445228__340.jpg',
+  },
+  {
+    text: 'Top Course On Machine Learning',
+    imgLink:
+      'https://cdn.pixabay.com/photo/2014/09/14/18/04/dandelion-445228__340.jpg',
+  },
+  {
+    text: 'Top Course On Machine Learning',
+    imgLink:
+      'https://cdn.pixabay.com/photo/2014/09/14/18/04/dandelion-445228__340.jpg',
+  },
+  {
+    text: 'Top Course On Machine Learning',
+    imgLink:
+      'https://cdn.pixabay.com/photo/2014/09/14/18/04/dandelion-445228__340.jpg',
+  },
+  {
+    text: 'Top Course On Machine Learning',
+    imgLink:
+      'https://cdn.pixabay.com/photo/2014/09/14/18/04/dandelion-445228__340.jpg',
+  },
+  {
+    text: 'Top Course On Machine Learning',
+    imgLink:
+      'https://cdn.pixabay.com/photo/2014/09/14/18/04/dandelion-445228__340.jpg',
+  },
+  {
+    text: 'Top Course On Machine Learning',
+    imgLink:
+      'https://cdn.pixabay.com/photo/2014/09/14/18/04/dandelion-445228__340.jpg',
+  },
+];
+
+const instructorDatas = [
+  {
+    imgLink:
+      'https://cdn.pixabay.com/photo/2014/09/14/18/04/dandelion-445228__340.jpg',
+    name: 'Anjali Sikka',
+    title: 'Python master, Readmycourse',
+    skills: 'Python, pythonfor BioInformatics',
+    student: 1123,
+    course: 10,
+    rating: '3.5',
+  },
+  {
+    imgLink:
+      'https://cdn.pixabay.com/photo/2014/09/14/18/04/dandelion-445228__340.jpg',
+    name: 'Anjali Sikka',
+    title: 'Python master, Readmycourse',
+    skills: 'Python, pythonfor BioInformatics',
+    student: 1123,
+    course: 10,
+    rating: '3.5',
+  },
+  {
+    imgLink:
+      'https://cdn.pixabay.com/photo/2014/09/14/18/04/dandelion-445228__340.jpg',
+    name: 'Anjali Sikka',
+    title: 'Python master, Readmycourse',
+    skills: 'Python, pythonfor BioInformatics',
+    student: 1123,
+    course: 10,
+    rating: '3.5',
+  },
+  {
+    imgLink:
+      'https://cdn.pixabay.com/photo/2014/09/14/18/04/dandelion-445228__340.jpg',
+    name: 'Anjali Sikka',
+    title: 'Python master, Readmycourse',
+    skills: 'Python, pythonfor BioInformatics',
+    student: 1123,
+    course: 10,
+    rating: '3.5',
+  },
+  {
+    imgLink:
+      'https://cdn.pixabay.com/photo/2014/09/14/18/04/dandelion-445228__340.jpg',
+    name: 'Anjali Sikka',
+    title: 'Python master, Readmycourse',
+    skills: 'Python, pythonfor BioInformatics',
+    student: 1123,
+    course: 10,
+    rating: '3.5',
+  },
+  {
+    imgLink:
+      'https://cdn.pixabay.com/photo/2014/09/14/18/04/dandelion-445228__340.jpg',
+    name: 'Anjali Sikka',
+    title: 'Python master, Readmycourse',
+    skills: 'Python, pythonfor BioInformatics',
+    student: 1123,
+    course: 10,
+    rating: '3.5',
+  },
+  {
+    imgLink:
+      'https://cdn.pixabay.com/photo/2014/09/14/18/04/dandelion-445228__340.jpg',
+    name: 'Anjali Sikka',
+    title: 'Python master, Readmycourse',
+    skills: 'Python, pythonfor BioInformatics',
+    student: 1123,
+    course: 10,
+    rating: '3.5',
+  },
+  {
+    imgLink:
+      'https://cdn.pixabay.com/photo/2014/09/14/18/04/dandelion-445228__340.jpg',
+    name: 'Anjali Sikka',
+    title: 'Python master, Readmycourse',
+    skills: 'Python, pythonfor BioInformatics',
+    student: 1123,
+    course: 10,
+    rating: '3.5',
+  },
+  {
+    imgLink:
+      'https://cdn.pixabay.com/photo/2014/09/14/18/04/dandelion-445228__340.jpg',
+    name: 'Anjali Sikka',
+    title: 'Python master, Readmycourse',
+    skills: 'Python, pythonfor BioInformatics',
+    student: 1123,
+    course: 10,
+    rating: '3.5',
+  },
+];
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -238,6 +467,8 @@ export function CourseDetails() {
                           </span>{' '}
                           Python, pythonfor BioInformatics
                         </div>
+                        <div className="name-under">1133 Students</div>
+                        <div className="name-under">10 Courses</div>
                       </div>
                     </div>
                   </div>
@@ -272,38 +503,25 @@ export function CourseDetails() {
             <div className="Sample-videos-tittle0">Sample videos</div>
             <div className="tab-videos">
               <div className="video-logoscroll">
-                <div className={classes.root}>
-                  <Tabs
-                    value={value}
-                    onChange={handleChange}
-                    indicatorColor="primary"
-                    textColor="primary"
-                    variant="scrollable"
-                    scrollButtons="auto"
-                    aria-label="scrollable auto tabs example"
-                  >
-                    <div className="video-tabs">
-                      <div className="videos-card">
-                        <img src="https://readmycourse.com/Images/iit-indore-logo.png" />
-                      </div>
-                      <div className="videos-card">
-                        <img src="https://readmycourse.com/Images/iit-indore-logo.png" />
-                      </div>
-                      <div className="videos-card">
-                        <img src="https://readmycourse.com/Images/iit-indore-logo.png" />
-                      </div>
-                      <div className="videos-card">
-                        <img src="https://readmycourse.com/Images/iit-indore-logo.png" />
-                      </div>
-                      <div className="videos-card">
-                        <img src="https://readmycourse.com/Images/iit-indore-logo.png" />
-                      </div>
-                      <div className="videos-card">
-                        <img src="https://readmycourse.com/Images/iit-indore-logo.png" />
-                      </div>
-                    </div>
-                  </Tabs>
-                </div>
+                <Tabs
+                  value={value}
+                  onChange={handleChange}
+                  indicatorColor="primary"
+                  textColor="primary"
+                  variant="scrollable"
+                  scrollButtons="auto"
+                  aria-label="scrollable auto tabs example"
+                >
+                  <div className="video-tabs">
+                    {videoDatas &&
+                      videoDatas.map((ele) => (
+                        <div className="videos-card">
+                          <img src={ele.imgLink} alt="video" />
+                          <div class="video-name">{ele.text}</div>
+                        </div>
+                      ))}
+                  </div>
+                </Tabs>
               </div>
             </div>
             <div>
@@ -331,30 +549,37 @@ export function CourseDetails() {
                     value={value}
                     onChange={handleChange}
                     variant="scrollable"
-                    scrollButtons="on"
+                    scrollButtons="auto"
                     indicatorColor="primary"
                     textColor="primary"
                     aria-label="scrollable force tabs example"
                   >
-                    <div className="profile-tab-cards">
-                      <div class="content-sub-tittle4">
-                        <img src="https://cdn.pixabay.com/photo/2014/09/14/18/04/dandelion-445228__340.jpg" />
-                        <div className="name-main-div">
-                          <div className="name">
-                            Anjali Sikka <span>(4.5/5)</span>
-                          </div>
-                          <div class="name-under">
-                            Python master, Readmycourse
-                          </div>
-                          <div className="class-tittle4">
-                            <span style={{ color: '#9900aa' }}>
-                              specialisation-
-                            </span>{' '}
-                            Python, pythonfor BioInformatics
+                    {instructorDatas &&
+                      instructorDatas.map((ele) => (
+                        <div className="profile-tab-cards">
+                          <div class="content-sub-tittle4">
+                            <img src={ele.imgLink} alt="author" />
+                            <div className="name-main-div">
+                              <div className="name">
+                                {ele.name} <span>({ele.rating}/5)</span>
+                              </div>
+                              <div class="name-under1">{ele.title}</div>
+                              <div className="class-tittle4">
+                                <span style={{ color: '#9900aa' }}>
+                                  specialisation-
+                                </span>{' '}
+                                {ele.skills}
+                              </div>
+                              <div className="name-under1">
+                                {ele.student} Students
+                              </div>
+                              <div className="name-under1">
+                                {ele.course} Courses
+                              </div>
+                            </div>
                           </div>
                         </div>
-                      </div>
-                    </div>
+                      ))}
                   </Tabs>
                 </div>
               </div>
@@ -365,7 +590,7 @@ export function CourseDetails() {
                     <Grid container spacing={0}>
                       <Grid item xs={12} sm={5}>
                         <Grid container spacing={0}>
-                          <Grid item xs={12} sm={4}>
+                          <Grid item xs={6} sm={4}>
                             <div class="star-Rating2">
                               <div className="point-reviews">4.8</div>
                               <Rating
@@ -377,7 +602,7 @@ export function CourseDetails() {
                               <div className="reviews">(1121)Reviews</div>
                             </div>
                           </Grid>
-                          <Grid item xs={12} sm={8}>
+                          <Grid item xs={6} sm={8}>
                             <div class="row">
                               <div className="rating-bar">
                                 <div className="rating-bar-num">5</div>
@@ -414,30 +639,30 @@ export function CourseDetails() {
                         </Grid>
                       </Grid>
                       <Grid item xs={12} sm={6}>
-                        <div className="rating-message">
-                          <div className="first-div">
-                            <img src="https://images.ctfassets.net/hrltx12pl8hq/5KiKmVEsCQPMNrbOE6w0Ot/341c573752bf35cb969e21fcd279d3f9/hero-img_copy.jpg?fit=fill&w=800&h=300" />
-                            <div className="rating-message-name">
-                              Alex Phillips
+                        {reviews &&
+                          reviews.map((ele) => (
+                            <div className="rating-message">
+                              <div className="first-div">
+                                <img src="https://images.ctfassets.net/hrltx12pl8hq/5KiKmVEsCQPMNrbOE6w0Ot/341c573752bf35cb969e21fcd279d3f9/hero-img_copy.jpg?fit=fill&w=800&h=300" />
+                                <div className="rating-message-name">
+                                  {ele.name}
+                                </div>
+                              </div>
+                              <div className="first-div2">
+                                <Rating
+                                  name="read-only"
+                                  value={ele.rating}
+                                  readOnly
+                                  precision={0.5}
+                                />
+                                <div className="reviews-post-date">
+                                  {ele.date}
+                                </div>
+                              </div>
+                              <div className="reviews-feedback">{ele.text}</div>
+                              <hr style={{ border: ' 1px solid #0000000' }} />
                             </div>
-                          </div>
-                          <div className="first-div2">
-                            <Rating
-                              name="read-only"
-                              value={starValue}
-                              readOnly
-                              precision={0.5}
-                            />
-                            <div className="reviews-post-date">11/03/2021</div>
-                          </div>
-                          <div className="reviews-feedback">
-                            This course teaches computer programming to those
-                            with little to no previous experience. Here you will
-                            learn Matrices and Operators, Function, programmer's
-                            Toolbox, loops, Data Type, and plotting
-                          </div>
-                          <hr style={{ border: ' 1px solid #0000000' }} />
-                        </div>
+                          ))}
                       </Grid>
                     </Grid>
                   </div>
