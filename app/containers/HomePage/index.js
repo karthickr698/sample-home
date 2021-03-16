@@ -305,9 +305,7 @@ export function HomePage() {
           </div>
           <CourseCard />
         </div>
-        <div className="textquestion">
-          Why should you choose <span style={{ color: '#9900aa' }}>us</span>?
-        </div>
+        <div className="textquestion">Why should you choose us?</div>
         <div>
           <div className="chats">
             <Grid container spacing={1} className="chats-cont">
@@ -411,7 +409,7 @@ export function HomePage() {
               </div>
             </div>
             <div className="thankstittle">Thankyou for visiting us</div>
-            <div style={{ height: '20vh' }}>
+            <div class='logo-img'>
               <div>
                 <img className="bottomimg" src={bottom} alt="bottom" />
               </div>
