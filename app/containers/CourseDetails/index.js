@@ -629,7 +629,7 @@ export function CourseDetails() {
                                   <div class="bar-5"></div>
                                 </div>
                                 <div className="rating-bar-num rating-bar-num1">
-                                  5
+                                  15%
                                 </div>
                               </div>
                               <div className="rating-bar">
@@ -638,7 +638,7 @@ export function CourseDetails() {
                                   <div class="bar-4"></div>
                                 </div>
                                 <div className="rating-bar-num rating-bar-num1">
-                                  5
+                                  25%
                                 </div>
                               </div>
                               <div className="rating-bar">
@@ -647,7 +647,7 @@ export function CourseDetails() {
                                   <div class="bar-3"></div>
                                 </div>
                                 <div className="rating-bar-num rating-bar-num1">
-                                  5
+                                  25%
                                 </div>
                               </div>
                               <div className="rating-bar">
@@ -656,7 +656,7 @@ export function CourseDetails() {
                                   <div class="bar-2"></div>
                                 </div>
                                 <div className="rating-bar-num rating-bar-num1">
-                                  5
+                                  25%
                                 </div>
                               </div>
                               <div className="rating-bar">
@@ -665,7 +665,7 @@ export function CourseDetails() {
                                   <div class="bar-1"></div>
                                 </div>
                                 <div className="rating-bar-num rating-bar-num1">
-                                  5
+                                  25%
                                 </div>
                               </div>
                             </div>

@@ -564,14 +564,14 @@
     font-size: 22px;
     margin: auto;
   }
-  .main-bookBtn{
+  .main-bookBtn {
     margin: auto;
   }
   .bookBtn {
     border-radius: 80px !important;
-    width: 14rem;
+    width: 15rem;
     height: 2.5rem;
-    font-size: 17px !important;
+    font-size: 16px !important;
     margin: auto;
   }
   .curve {
@@ -623,7 +623,7 @@
   .massegebox1 {
     margin-right: 0rem;
   }
-  .chart-sub-cont{
+  .chart-sub-cont {
     width: 92vw;
   }
   .chart-sub-cont1 {
@@ -651,7 +651,7 @@
     margin-left: 2rem;
     margin-bottom: 2rem;
   }
-  .mailinput input{
+  .mailinput input {
     width: 50vw;
   }
   .mailinput Button {

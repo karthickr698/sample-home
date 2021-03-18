@@ -391,8 +391,11 @@ body {
 }
 
 .rating-bar-num1 {
+  padding-top: 3px;
   margin-right: 0;
   margin-left: 10px;
+  font-weight: 100;
+  font-size: 1rem;
 }
 .content-sub-tittle4 img {
   width: 80px;
@@ -511,6 +514,6 @@ body {
     padding: 0 0 0 15%;
   }
   .bar-container {
-    width: 75%;
+    width: 63%;
   }
 }

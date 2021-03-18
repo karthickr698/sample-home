@@ -80,6 +80,7 @@
   margin: 0;
   margin-top: 1rem;
   text-align: center;
+  padding: 0px 3%;
 }
 .card-sub-contect {
   color: #827f7f;
@@ -123,7 +124,8 @@
 
 @media only screen and (max-width: 600px) {
   .card {
-    width: 85vw;
+    width: 92vw;
+    height: 22rem;
   }
   .overallgrid {
     margin: 1rem 1.5rem;
@@ -142,6 +144,8 @@
   }
   .MAEG-Award {
     padding: 1.5rem 2rem;
+    text-align: center;
+    padding-top: 14vh;
   }
   .head-tittle {
     text-align: center;
@@ -151,11 +155,14 @@
   .sub-tittle {
     margin-top: 1.5rem;
   }
-  .MAEG-Award {
-    text-align: center;
-  }
   .MAEG-Award Button {
     margin-top: 2rem;
     zoom: 0.8;
+  }
+  .about-us {
+    margin: 1rem 3rem 0 1rem;
+  }
+  .about-us-sub-tittle {
+    margin-top: 1rem;
   }
 }
