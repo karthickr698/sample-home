@@ -85,9 +85,9 @@ function Footer() {
             </div>
           </Grid>
         </Grid>
-      </div>
-      <div style={{ textAlign: 'center', paddingBottom: '2rem' }}>
-        Copyright @ 2021 All rights reserved ! ReadMyCourse
+        <div style={{ textAlign: 'center', paddingBottom: '2rem' }}>
+          Copyright @ 2021 All rights reserved ! ReadMyCourse
+        </div>
       </div>
     </div>
   );

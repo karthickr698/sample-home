@@ -193,15 +193,17 @@ export function HomePage() {
               Most Unique courses around the Globe <span>curated for you</span>
             </div>
           </div>
-          <Button variant="contained" color="secondary" className="bookBtn">
-            Book a free class
-          </Button>
+          <div class="main-bookBtn">
+            <Button variant="contained" color="secondary" className="bookBtn">
+              Book a free classes
+            </Button>
+          </div>
         </div>
       </div>
       <div>
         <div className="subtittle">
           <div>
-            Achieve your targets with <span>ReadMycourse</span>
+            Achieve your targets with <span>ReadMyCourse</span>
           </div>
           <div className="textopacity">
             Try a free live course today from instructors 10+ world-class
@@ -231,9 +233,9 @@ export function HomePage() {
         <div className="curve-overall">
           <div className="curvetop">
             <img className="curve-mid" src={midel} alt="middle" />
-            <div className="texttittle1">Benefites of learning live</div>
+            <div className="texttittle1">Benefits of learning live</div>
             <div className="textopacityalign">
-              Do you want to know why millions of students want learn live?
+              Do you want to know why millions of students want to learn live?
             </div>
             <div className="icons">
               <Grid container spacing={1}>
@@ -254,7 +256,7 @@ export function HomePage() {
             <div className="texttittle1">
               Features available in our live classes
             </div>
-            <div className="livetittle">"who knows, dose it live"</div>
+            <div className="livetittle">"who knows, does it live"</div>
             <div className="icons features">
               <Grid container spacing={1}>
                 {features &&
@@ -274,7 +276,7 @@ export function HomePage() {
               We help you to get job in <span>top companies</span>
             </div>
             <div className="textopacityalign">
-              Try a free live course today from instructors 10+ world-class
+              Try a free live courses today from instructors 10+ world-class
               universities
             </div>
             <div className="logoscroll2">
@@ -408,7 +410,7 @@ export function HomePage() {
                 <img src="https://readmycourse.com/Images/rmc_certifcate_sample.jpg.jpg" />
               </div>
             </div>
-            <div className="thankstittle">Thankyou for visiting us</div>
+            <div className="thankstittle">Thank you for visiting us</div>
             <div class='logo-img'>
               <div>
                 <img className="bottomimg" src={bottom} alt="bottom" />

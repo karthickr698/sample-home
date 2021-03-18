@@ -22,34 +22,68 @@ import saga from './saga';
 import './maeg.css';
 import Header from '../../components/Header/Loadable';
 import Footer from '../../components/Footer/Loadable';
+import approved from '../images/maeg_images/approved.svg'
+import live from '../images/maeg_images/live.svg'
+import machine from '../images/maeg_images/machine-learning.svg'
+import medal from '../images/maeg_images/medal.svg'
+import microphone from '../images/maeg_images/microphone.svg'
+import networking from '../images/maeg_images/networking.svg'
+import pride from '../images/maeg_images/pride.svg'
+import shuttle from '../images/maeg_images/shuttle.svg'
 
 const mentorData = [
   {
-    imageLink: 'https://readmycourse.com/Images/icon/web_icons/pride.svg',
+    imageLink: pride,
     title: 'A Matter of Pride',
     text:
       'Opportunity to showcase your ability to help grow someone in their career. It makes you special and will be remembered by the community always.',
   },
   {
-    imageLink:
-      'https://readmycourse.com/Images/icon/web_icons/machine-learning.svg',
+    imageLink: machine,
     title: 'Endless Learning For You Too',
     text:
       'Teaching improves your efficacy, confidence and communication skills. In addition to that it better organizes information to our mind.',
   },
   {
-    imageLink: 'https://readmycourse.com/Images/icon/web_icons/networking.svg',
+    imageLink: networking,
     title: 'An Ever Growing Network',
     text:
       'Meet professionals from different industries and build a long-lasting network of like-minded, driven individuals.',
   },
   {
-    imageLink: 'https://readmycourse.com/Images/icon/web_icons/microphone.svg',
+    imageLink: microphone,
     title: 'Recognition',
     text:
       'You will get the full credit of your work, certificate and appreciation from our mentors.',
   },
 ];
+
+const awardSteps=[
+  {
+    imageLink:shuttle,
+    step:'step 1',
+    title:'Launch',
+    text:'Launch any live course on our platform. It takes less than a minute. Choose any topic that you are most familier with.'
+  },
+  {
+    imageLink:approved,
+    step:'step 2',
+    title:'Get Verified',
+    text:'Your course will be verified by our team. Such that it follows our community standards.'
+  },
+  {
+    imageLink:live,
+    step:'step 3',
+    title:'Live',
+    text:'After varification your course will be live and student will start registering.'
+  },
+  {
+    imageLink:medal,
+    step:'step 4',
+    title:'Receive Certificate',
+    text:'After students registered to your course, You can start the classroom and after finishing the course you will receive the certificate.'
+  },
+]
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -124,19 +158,22 @@ export function Maeg() {
         </Grid>
       </div>
       <div class="question-content">Steps to get MAEG Award</div>
-      <div>
-        <div class="card">
-          <div class="card-contect">Step 1</div>
-          <div className="card-img">
-            <img src="https://readmycourse.com/Images/icon/web_icons/shuttle.svg" />
-          </div>
-          <div class="card-contect">Launch</div>
-          <div class="card-sub-contect">
-            Launch any live course on our platform. It takes less than a minute.
-            Choose any topic that you are most familier with.
-          </div>
-        </div>
-      </div>
+      <Grid container spacing={1}>
+        {awardSteps && awardSteps.map(ele=>(
+          <Grid item xs={12} sm={6} lg={3}>
+            <div class="card">
+              <div class="card-contect">{ele.step}</div>
+              <div className="card-img">
+                <img src={ele.imageLink} alt='steps' />
+              </div>
+              <div class="card-contect">{ele.title}</div>
+              <div class="card-sub-contect">
+                {ele.text}
+              </div>
+            </div>
+          </Grid>
+        ))}
+      </Grid>
       <div class="overallgrid">
         <div className={classes.root}>
           <Grid container spacing={3}>

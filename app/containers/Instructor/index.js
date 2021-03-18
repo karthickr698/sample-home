@@ -190,7 +190,7 @@ export function Instructor() {
         <div className="instructor-courses">Courses</div>
         <CourseCard />
         <div className="Sample-videos-tittle2">
-          Student reviews on Anjali Sikka
+          Students reviews on Anjali Sikka
         </div>
         <div>
           <div className="rating-div">

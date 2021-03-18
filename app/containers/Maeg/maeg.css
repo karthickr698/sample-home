@@ -59,10 +59,12 @@
 }
 .card {
   width: 90%;
-  height: 23rem;
+  height: 25rem;
   background-color: white;
   margin: 1rem 0 1rem 1rem;
-  border: 1px solid rgb(167, 167, 167);
+  /* border: 1px solid rgb(167, 167, 167); */
+  border-radius: 5px;
+  box-shadow: 10px 10px 30px rgb(184, 182, 182);
 }
 .card-img {
   width: 100%;

@@ -141,7 +141,7 @@ body {
 }
 .curve-top-back {
   position: absolute;
-  height: 90vh;
+  height: 95vh;
   width: 98.8vw;
 }
 .content-tittle {
@@ -265,7 +265,7 @@ body {
   text-align: center;
 }
 .videos-card img {
-  width: 19.8vw;
+  width: 95%;
   margin-top: 5px;
   height: 27vh;
   border: 1px solid rgb(182, 182, 182);
@@ -297,9 +297,9 @@ body {
   margin-top: 2rem;
 }
 .rating-message img {
-  width: 5vw;
+  width: 70px;
   border-radius: 50%;
-  height: 10vh;
+  height: 70px;
 }
 .first-div {
   display: flex;
@@ -435,7 +435,7 @@ body {
   }
   .MuiGrid-container {
     width: 90% !important;
-    margin-left: 2rem;
+    margin-left: 20px;
   }
 
   .MuiTabScrollButton-root {
@@ -449,13 +449,10 @@ body {
     margin-bottom: 5rem;
   }
   .rating-message img {
-    width: 16vw;
+    width: 70px;
   }
   .curve-top-back {
-    position: absolute;
-    margin: 0 !important;
-    height: 165vh;
-    width: 98.8vw;
+    display: none;
   }
   .Sample-videos-tittle {
     margin-top: 15rem;
@@ -471,14 +468,11 @@ body {
     text-align: center;
   }
   .videos-card img {
-    width: 15vw;
     height: 20vh;
+    width: 95%;
   }
   .weeks-table {
     width: 90vw;
-  }
-  .videos-card img {
-    width: 37vw;
   }
   .grid-over-all {
     margin: 0rem;
@@ -496,7 +490,7 @@ body {
     padding-left: 0rem;
   }
   .Sample-videos-tittle0 {
-    margin-top: 33vh;
+    margin-top: 10vh;
   }
   .profile-tab-cards {
     width: 90vw;
@@ -509,9 +503,6 @@ body {
   }
   .content-sub-tittle4 img {
     margin: auto;
-  }
-  .name-main-div {
-    text-align: center;
   }
   .star-Rating2 {
     margin-left: 0rem;

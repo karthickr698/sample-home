@@ -217,7 +217,7 @@
   border-radius: 80px !important;
   width: 22rem;
   height: 4rem;
-  font-size: 25px !important;
+  font-size: 22px !important;
   padding: 0 3% !important;
 }
 
@@ -262,8 +262,7 @@
 }
 .curve-mid {
   width: 100%;
-  min-height: 50rem;
-  max-height: 85rem;
+  height: 90rem;
   position: absolute;
   z-index: 0;
 }
@@ -278,7 +277,7 @@
   font-weight: 900;
   color: #9900aa;
   text-align: center;
-  margin-top: 85vh;
+  margin-top: 100vh;
   margin-bottom: 1rem;
 }
 .texttittle {
@@ -554,23 +553,26 @@
     padding: 0.2rem;
   }
   .overall {
-    text-align: center;
+    text-align: center !important;
     height: 10rem;
-    margin-left: 0;
-    width: 88vw;
+    float: none;
+    width: 100%;
+    margin-left: 0 !important;
   }
   .textcontect {
     height: 10rem;
-    padding-left: 1em;
-    padding-top: 3rem;
     font-size: 22px;
-    width: 100%;
+    margin: auto;
+  }
+  .main-bookBtn{
+    margin: auto;
   }
   .bookBtn {
     border-radius: 80px !important;
     width: 14rem;
     height: 2.5rem;
     font-size: 17px !important;
+    margin: auto;
   }
   .curve {
     margin-top: 0rem;
@@ -621,6 +623,9 @@
   .massegebox1 {
     margin-right: 0rem;
   }
+  .chart-sub-cont{
+    width: 92vw;
+  }
   .chart-sub-cont1 {
     margin-left: 0rem;
   }
@@ -643,8 +648,11 @@
   }
   .gridalign {
     margin: 0rem;
-    margin-left: 4rem;
+    margin-left: 2rem;
     margin-bottom: 2rem;
+  }
+  .mailinput input{
+    width: 50vw;
   }
   .mailinput Button {
     width: 50vw;
